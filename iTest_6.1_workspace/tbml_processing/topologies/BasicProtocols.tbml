@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tbml xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.teslaalliance.org/trs/tbml/1.0/tbml-core.xsd" xmlns="http://www.teslaalliance.org/trs/tbml/1.0">
+  <header>
+    <name></name>
+    <description></description>
+    <property name="author">emiller</property>
+    <property name="dateCreated">2014-08-31T06:37:12.222-07:00</property>
+    <property name="dateModified">2014-08-31T09:31:33.854-07:00</property>
+    <property name="creationTool" vendor="com.fnfr">com.fnfr.itest.topology.tbml.diagram</property>
+    <property name="creationToolVersion" vendor="com.fnfr">4.3.1.73463</property>
+  </header>
+  <body>
+    <resources>
+      <resource guid="f5136129-48d4-4191-bdcb-83ec1ede510b" id="resource_0" type="pc">
+        <boundary height="100" width="100" x="228" y="209"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/pc_32.gif</property>
+        <property name="name">pc1</property>
+        <extensions type="com.fnfr.itest.session" xs:namespace="com.fnfr.itest.session">
+          <session baseSessionProfile="" name="ssh" provider="com.fnfr">
+            <sessionProfile version="4.3.1.73463">
+              <baseApplication>com.fnfr.svt.applications.ssh</baseApplication>
+              <sessionProperties type="com.fnfr.svt.applications.ssh.documents.SSHProperties">
+                <ipAddress inherit="false">10.155.0.123</ipAddress>
+                <user inherit="false">auser</user>
+                <password inherit="false">xpr9DJECoDnnYI/UTPj2Wg==</password>
+              </sessionProperties>
+            </sessionProfile>
+          </session>
+          <session baseSessionProfile="" name="ssh-inherit" provider="com.fnfr">
+            <sessionProfile version="4.3.1.73463">
+              <baseApplication>com.fnfr.svt.applications.ssh</baseApplication>
+              <sessionProperties type="com.fnfr.svt.applications.ssh.documents.SSHProperties"/>
+              <baseProfile>project://itp/session_profiles/Ssh.ffsp</baseProfile>
+              <standalone>false</standalone>
+            </sessionProfile>
+          </session>
+        </extensions>
+        <resource guid="54570b79-58eb-41e3-ab8d-dfd53b87dae4" id="resource_0_0" type="port">
+          <property name="name">port1</property>
+        </resource>
+      </resource>
+      <resource guid="06fd950f-4c80-4ea8-b442-2b89d628c654" id="resource_1" type="switch">
+        <boundary height="100" width="100" x="492" y="216"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/switch_32.gif</property>
+        <property name="name">switch1</property>
+        <extensions type="com.fnfr.itest.session" xs:namespace="com.fnfr.itest.session">
+          <session baseSessionProfile="" name="ssh" provider="com.fnfr">
+            <sessionProfile version="4.3.1.73463">
+              <baseApplication>com.fnfr.svt.applications.ssh</baseApplication>
+              <sessionProperties type="com.fnfr.svt.applications.ssh.documents.SSHProperties"/>
+              <baseProfile>project://itp/session_profiles/Ssh.ffsp</baseProfile>
+              <standalone>false</standalone>
+            </sessionProfile>
+          </session>
+          <session baseSessionProfile="" name="telnet" provider="com.fnfr">
+            <sessionProfile version="4.3.1.73463">
+              <baseApplication>com.fnfr.svt.applications.telnet</baseApplication>
+              <sessionProperties type="com.fnfr.svt.applications.telnet.documents.TelnetSessionProperties"/>
+              <baseProfile>project://itp/session_profiles/Telnet.ffsp</baseProfile>
+              <standalone>false</standalone>
+            </sessionProfile>
+          </session>
+        </extensions>
+        <resource guid="826a99d4-1c1c-4f42-8426-c8f774465804" id="resource_1_0" type="port">
+          <property name="name">port1</property>
+        </resource>
+        <resource guid="af2d973f-c613-4e52-890e-4712fbdff226" id="resource_1_1" type="port">
+          <property name="name">port2</property>
+        </resource>
+        <resource guid="a87368c7-80bd-4146-bbe3-bfc663827ac7" id="resource_1_2" type="port">
+          <property name="name">port3</property>
+        </resource>
+        <resource guid="c36f635f-f8b0-4544-8796-ca67a4dcb743" id="resource_1_3" type="port">
+          <property name="name">port4</property>
+        </resource>
+      </resource>
+      <resource guid="535fc250-23e7-4126-a7ab-b941c5c2a52c" id="resource_2" type="pc">
+        <boundary height="100" width="100" x="720" y="216"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/pc_32.gif</property>
+        <property name="name">pc2</property>
+        <extensions type="com.fnfr.itest.session" xs:namespace="com.fnfr.itest.session">
+          <session baseSessionProfile="" name="telnet" provider="com.fnfr">
+            <sessionProfile version="4.3.1.73463">
+              <baseApplication>com.fnfr.svt.applications.telnet</baseApplication>
+              <sessionProperties type="com.fnfr.svt.applications.telnet.documents.TelnetSessionProperties">
+                <ipAddress inherit="false">10.155.0.123</ipAddress>
+              </sessionProperties>
+            </sessionProfile>
+          </session>
+          <session baseSessionProfile="" name="telnet-inherit" provider="com.fnfr">
+            <sessionProfile version="4.3.1.73463">
+              <baseApplication>com.fnfr.svt.applications.telnet</baseApplication>
+              <sessionProperties type="com.fnfr.svt.applications.telnet.documents.TelnetSessionProperties"/>
+              <baseProfile>project://itp/session_profiles/Telnet.ffsp</baseProfile>
+              <standalone>false</standalone>
+            </sessionProfile>
+          </session>
+        </extensions>
+        <resource guid="32c9a733-e8c1-4644-a8d9-997c2e15827b" id="resource_2_0" type="port">
+          <property name="name">port1</property>
+        </resource>
+      </resource>
+      <resource guid="dea91b4e-5814-45f8-949f-e5b7ed7f5cc5" id="resource_3" type="trafficgen">
+        <boundary height="100" width="100" x="492" y="420"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/Traffic-Generator_32.gif</property>
+        <property name="name">trafficgen1</property>
+        <extensions type="com.fnfr.itest.session" xs:namespace="com.fnfr.itest.session">
+          <session baseSessionProfile="" name="Spirent_TestCenter" provider="com.fnfr">
+            <sessionProfile version="4.3.1.73463">
+              <baseApplication>com.fnfr.svt.applications.spirent.testcenter.gui</baseApplication>
+              <sessionProperties ports="//10.155.0.321/1/1 //10.155.0.322/1/1" ports.inherit="false" transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.TestCenterGUISessionProperties" type="com.fnfr.svt.adapter.automation.tools.common.documents.TransferableDocumentObject">
+                <configurePort dataPathMode="NORMAL" dataPathMode.inherit="false" duplexMode="FULL" duplexMode.inherit="false" transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.ConfigurePortProperties"/>
+                <configureCustom16bitFilter endOfRange="ffff" endOfRange.inherit="false" mask="ffff" mask.inherit="false" transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.Analyzer16BitFilterProperties"/>
+                <configureStreamBlock enableFcsErrorInsertion="false" enableFcsErrorInsertion.inherit="false" transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.StreamBlockProperties"/>
+              </sessionProperties>
+            </sessionProfile>
+          </session>
+          <session baseSessionProfile="" name="tclsh" provider="com.fnfr">
+            <sessionProfile version="4.3.1.73463">
+              <baseApplication>com.fnfr.svt.applications.tclsh</baseApplication>
+              <sessionProperties type="com.fnfr.svt.applications.tclsh.TclshSessionProperties">
+                <tclProperties>
+                  <useGlobalInterpreter inherit="false">true</useGlobalInterpreter>
+                </tclProperties>
+              </sessionProperties>
+            </sessionProfile>
+          </session>
+        </extensions>
+        <resource guid="77ab137e-5d6f-47e7-a1a9-c99a89080185" id="resource_3_0" type="port">
+          <property name="name">port1</property>
+        </resource>
+        <resource guid="51f5f69d-ca82-42ca-8653-5ed685dd0e19" id="resource_3_1" type="port">
+          <property name="name">port2</property>
+        </resource>
+      </resource>
+    </resources>
+    <connectivity>
+      <link id="link_0">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet1</property>
+        <endpoint id="resource_0_0"/>
+        <endpoint id="resource_1_0"/>
+      </link>
+      <link id="link_1">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet2</property>
+        <endpoint id="resource_1_1"/>
+        <endpoint id="resource_2_0"/>
+      </link>
+      <link id="link_2">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet3</property>
+        <endpoint id="resource_1_2"/>
+        <endpoint id="resource_3_0"/>
+      </link>
+      <link id="link_3">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet4</property>
+        <endpoint id="resource_1_3"/>
+        <endpoint id="resource_3_1"/>
+      </link>
+    </connectivity>
+  </body>
+  <illustration>
+    <layer/>
+  </illustration>
+</tbml>

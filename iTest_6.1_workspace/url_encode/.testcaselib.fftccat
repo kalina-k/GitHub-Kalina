@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<TestCaseCatalog version="6.1.0.863d7a9">
+    <testCaseCatalog>
+        <item name="test_cases/quick%20call%25.fftc">
+            <tcDescriptor version="6.1.0.863d7a9">
+                <general>
+                    <sessionClass includeTestCase="true" sessionType="project://url_encode/session_profiles/hello%25.ffsp"/>
+                </general>
+                <procedures>
+                    <item name="qc0" isPublic="true"/>
+                </procedures>
+            </tcDescriptor>
+        </item>
+    </testCaseCatalog>
+</TestCaseCatalog>

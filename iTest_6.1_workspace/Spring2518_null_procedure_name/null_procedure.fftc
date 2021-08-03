@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<testCase version="6.1.0.863d7a9">
+    <procedures>
+        <item>
+            <steps>
+                <item guid="d98efb9f-baed-4099-8fc4-0a534d101768" action="eval">
+                    <command>
+                        <body>puts &quot;Null procedure name&quot;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+            </steps>
+        </item>
+    </procedures>
+</testCase>

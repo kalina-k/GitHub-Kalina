@@ -1,0 +1,274 @@
+{
+    "defaultData": {
+        "commandSequence": [
+            "%file% %parameterNameValuePairList%"
+        ],
+        "description": "%file% script run from core regression",
+        "executionMessages": {
+            "error": "^.*(ERROR|CRITICAL).*",
+            "info": "^.*(DEBUG|INFO).*",
+            "ok": "^.*(verified).*",
+            "warning": "^.*(WARNING).*"
+        },
+        "headline": "%file% from Core Regression Suite",
+        "hidden": false,
+        "language": "python",
+        "namespace": "CoreRegression",
+        "owner": "Joe Scripter",
+        "parameters": [
+            {
+                "description": "for all scripts (from defaultData)",
+                "name": "build",
+                "type": "TEXT",
+                "value": "72e8644"
+            }
+        ],
+        "testCaseId": "TC.CR.%file%",
+        "testCaseName": "Core Regression %file%",
+        "timeout": 10,
+        "verdictMethod": "EXIT_CODE_VERDICT_PARSING",
+        "verdictParsing": {
+            "failTest": "Finished: FAILED",
+            "failTestIfPassing": "Failure number \\d+",
+            "passTest": "Finished: PASSED",
+            "passTestIfNotAlreadyFailed": "SUCCESS"
+        }
+    },
+    "fileSets": [
+        {
+            "fileNameMatch": ".*\\.bat",
+            "commandSequence": [
+                "%file% %param_build%"
+            ],
+            "language": "batch"
+        },
+        {
+            "fileNameMatch": "simple\\.ps1",
+            "language": "powershell"
+        },
+        {
+            "fileNameMatch": "timeout\\.sh",
+            "language": "bash",
+            "timeout": 1
+        },
+        {
+            "fileNameMatch": "vbot\\.example\\.py",
+            "commandSequence": [
+              "%file% --ipAddress %param_property_ipAddress% --resourceId %param_resourceId%"
+            ],
+            "description": "This vBot will appear in the topology editor of an active reservation and will be associated with each resource whose tag is either foo or bar",
+            "headline": "Example vBot",
+            "tags": ["foo", "bar"],
+            "parameters": [
+                {
+                    "description": "Name begins with property_ so user is not prompted for value. Value is auto-populated by Velocity",
+                    "name": "property_ipAddress"
+                }
+            ]
+        },
+        {
+            "fileNameMatch": "execution_env\\.py",
+            "requirements": [
+                {
+                    "name": "product.arch",
+                    "value": "x86_64"
+                }
+            ]
+        },
+        {
+            "fileNameMatch": ".*addTwoNumbersTogether\\.py",
+            "extractedData": [
+                {
+                    "pattern": "^Added: (.*)$",
+                    "tag": "addedNumbers"
+                },
+                {
+                    "pattern": "^Subtracted: (.*)$",
+                    "tag": "subtractedNumbers"
+                }
+            ],
+            "parameters": [
+                {
+                    "description": "first number",
+                    "name": "input_number1",
+                    "type": "TEXT",
+                    "value": "10"
+                },
+                {
+                    "description": "second number",
+                    "name": "input_number2",
+                    "type": "TEXT",
+                    "value": "5"
+                },
+                {
+                    "description": "added numbers",
+                    "name": "output_addedNumbers",
+                    "type": "TEXT",
+                    "value": "NA"
+                },
+                {
+                    "description": "subtracted numbers",
+                    "name": "output_subtractedNumbers",
+                    "type": "TEXT",
+                    "value": "NA"
+                }
+            ]
+        },
+        {
+            "fileNameMatch": "extractedData\\.py",
+            "extractedData": [
+                {
+                    "pattern": "^DUT Version : (.*)$",
+                    "tag": "DUT Build Number"
+                },
+                {
+                    "pattern": "^Response Time : (\\d+)$",
+                    "tag": "Response Latency ms"
+                }
+            ]
+        },
+        {
+            "fileNameMatch": "parameters_list\\.py",
+            "commandSequence": [
+                "%file% --build %param_build% --testCaseSpecificParameter %param_testCaseSpecificParameter%"
+            ],
+            "parameters": [
+                {
+                    "description": "A specific parameter specific for this test",
+                    "name": "testCaseSpecificParameter",
+                    "type": "TEXT",
+                    "value": "Default Value"
+                }
+            ]
+        },
+        {
+            "fileNameMatch": "parameter_types\\.py",
+            "commandSequence": [
+                "%file% --text %param_text% --masked %param_masked% --boolean %param_boolean% --double %param_double% --integer %param_integer% --custom %param_custom%"
+            ],
+            "customParameterTypes": [
+                {
+                    "choices": [
+                        {
+                            "description": "choice 1 described",
+                            "name": "choice1"
+                        },
+                        {
+                            "description": "choice 2 described",
+                            "name": "choice2"
+                        }
+                    ],
+                    "name": "mycustomtype"
+                }
+            ],
+            "parameters": [
+                {
+                    "description": "text type introduced in 8.0",
+                    "name": "text",
+                    "type": "TEXT",
+                    "value": "textVal"
+                },
+                {
+                    "description": "masked type introduced in 8.0",
+                    "name": "masked",
+                    "type": "TEXT",
+                    "masked": true
+                },
+                {
+                    "description": "boolean type introduced in 8.0",
+                    "name": "boolean",
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                {
+                    "description": "double type introduced in 8.0",
+                    "name": "double",
+                    "type": "DOUBLE",
+                    "value": "1.1"
+                },
+                {
+                    "description": "integer type introduced in 8.0",
+                    "name": "integer",
+                    "type": "INTEGER",
+                    "value": "1"
+                },
+                {
+                    "description": "custom type introduced in 8.0",
+                    "name": "custom",
+                    "type": "mycustomtype",
+                    "value": "choice1"
+                }
+            ]
+        },
+        {
+            "fileNameMatch": "robotDemo\\.robot",
+            "commandSequence": [
+                "-m robot -b debug.txt --variable MESSAGE:%param_message% %file%",
+                "robotDemoShowDebugFile.py"
+            ],
+            "description": "This is a Robot Framework demo. The execution agent must have robotframework and docutils installed, e.g., pip install robotframwork docutils",
+            "executionMessages": {
+                "error": "^.*(\\| FAIL \\||- FAIL -).*",
+                "info": "^.*(\\[INFO\\]).*",
+                "ok": "^.*(\\| PASS \\|).*",
+                "warning": "^.*(\\[WARNING\\]).*"
+            },
+            "tags": ["robot", "example"],
+            "parameters": [
+                {
+                    "description": "Message to display",
+                    "name": "message",
+                    "type": "TEXT",
+                    "value": "Hello, world!"
+                }
+            ],
+            "verdictParsing": {
+                "failTest": "Finished: FAILED|\\d tests total, \\d passed, [1-9]\\d* failed",
+                "failTestIfPassing": "Failure number \\d+",
+                "passTest": "\\d tests total, \\d passed, 0 failed",
+                "passTestIfNotAlreadyFailed": "SUCCESS"
+            }
+        },
+        {
+            "fileNameMatch": "robotDemoShowDebugFile\\.py",
+            "hidden": true
+        },
+        {
+            "fileNameMatch": "legacy/smokeTest[0-9]+\\.tcl",
+            "commandSequence": [
+                "-c '/usr/bin/tclsh %file%'"
+            ],
+            "description": "Smoke test %file% from the legacy suite",
+            "headline": "%file% from Smoke Test Suite",
+            "language": "bash",
+            "testCaseName": "Smoke test %file%",
+            "timeout": 60
+        },
+        {
+            "fileNameMatch": "pipenv_project/convert\\.calendar\\.date\\.to\\.julian\\.py",
+            "description": "Example script using pipenv in a Python virtualenv. Requires pip to be installed on the Velocity agent host",
+            "commandSequence": [
+                "-c 'export PYTHONUNBUFFERED=1; MYNAME=$(basename `pwd`); VENV=/tmp/myscripts-$MYNAME; virtualenv $VENV; $VENV/bin/pip install -U pipenv; . $VENV/bin/activate; $VENV/bin/pipenv install --ignore-pipfile; $VENV/bin/pipenv run python %file%'"
+            ],
+            "language": "bash"
+        },
+        {
+            "fileNameMatch": ".*\\.sh",
+            "commandSequence": [
+                "%file% %param_build%"
+            ],
+            "language": "bash"
+        },
+        {
+            "fileNameMatch": ".*\\.py",
+            "parameters": [
+                {
+                    "description": "for all other .py files (from fileNameMatch)",
+                    "name": "python_parameter",
+                    "type": "TEXT",
+                    "value": "my Python parameter"
+                }
+            ]
+        }
+    ]
+}

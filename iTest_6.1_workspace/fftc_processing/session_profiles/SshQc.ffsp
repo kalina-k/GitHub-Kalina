@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<SessionTemplate version="5.1.0.77511">
+    <baseApplication>com.fnfr.svt.applications.ssh</baseApplication>
+    <sessionProperties type="com.fnfr.svt.applications.ssh.documents.SSHProperties">
+        <ipAddress inherit="false">eric-itp.spirenteng.com</ipAddress>
+        <user inherit="false">auser</user>
+        <password inherit="false">xpr9DJECoDnnYI/UTPj2Wg==</password>
+    </sessionProperties>
+    <responseLibrary inherit="false">project://response_map_library/</responseLibrary>
+    <emulationSource inherit="false">project://response_map_library/</emulationSource>
+    <sessionClassTestCase inherit="false">project://fftc_processing/test_cases/QcSample.fftc</sessionClassTestCase>
+    <nickName>sshQc</nickName>
+    <Overview>SSH Example</Overview>
+    <Description>An example ssh profile</Description>
+</SessionTemplate>

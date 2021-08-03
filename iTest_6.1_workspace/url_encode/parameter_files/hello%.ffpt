@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ParameterTree version="6.1.0.863d7a9">
+    <parameters escape="true">
+        <parameters xmlns:pt="http://www.fnfr.com/schemas/parameterTree">
+            <param1>value1</param1>
+        </parameters>
+    </parameters>
+    <includeParameters>
+        <item>hello%20include0%25.ffpt</item>
+        <item>hello%20include1%25.ffpt</item>
+    </includeParameters>
+</ParameterTree>

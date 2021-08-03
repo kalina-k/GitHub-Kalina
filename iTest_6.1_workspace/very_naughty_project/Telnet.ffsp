@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<SessionTemplate version="4.3.1.73463">
+    <baseApplication>com.fnfr.svt.applications.telnet</baseApplication>
+    <sessionProperties type="com.fnfr.svt.applications.telnet.documents.TelnetSessionProperties">
+        <ipAddress inherit="false">10.155.0.123</ipAddress>
+    </sessionProperties>
+    <Overview>Telnet Example</Overview>
+    <Description>An example telnet profile</Description>
+</SessionTemplate>

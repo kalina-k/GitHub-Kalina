@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<SessionTemplate version="6.1.0.863d7a9">
+    <baseApplication>com.fnfr.svt.applications.tclsh</baseApplication>
+    <sessionProperties type="com.fnfr.svt.applications.tclsh.TclshSessionProperties"/>
+    <sessionClassTestCase inherit="false">project://my_project/library.fftc</sessionClassTestCase>
+</SessionTemplate>

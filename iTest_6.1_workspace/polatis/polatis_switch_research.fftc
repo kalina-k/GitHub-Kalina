@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<testCase version="6.1.0.863d7a9">
+    <procedures>
+        <item name="main">
+            <steps>
+                <item guid="425c2024-82e9-4944-82aa-88464a7b87a3" action="comment">
+                    <command>
+                        <body>Open step use completion with 1 sec timeout. Otherwise it just hangs forever</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="399a9c64-bad1-47d4-ac6c-8878feb71467" action="open" session="pol">
+                    <command>
+                        <body>project://polatis/polatis_telnet_tl1_raw.ffsp</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.OpenStepPropertyGroup">
+                        <stepProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                        <sessionProperties type="com.fnfr.svt.applications.telnet.documents.TelnetSessionProperties">
+                            <TerminalProperties>
+                                <stepDefaults>
+                                    <completionProperties>
+                                        <completeWhen inherit="false">TIMED</completeWhen>
+                                    </completionProperties>
+                                </stepDefaults>
+                            </TerminalProperties>
+                        </sessionProperties>
+                        <sessionClass type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                        <sessionVersion type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    </applicationProperties>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="76d03166-62a7-47d6-b8cc-4d9c89e0fd27" action="comment">
+                    <command>
+                        <body>The follow dummy command is needed. Otherwise I&apos;m seeing the switch not understand the login cmd</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="d43159d8-695b-4585-8170-2598b40feccf" action="command" session="pol">
+                    <command>
+                        <body>;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties>
+                            <completeWhen inherit="false">TL1_EOM</completeWhen>
+                        </completionProperties>
+                    </applicationProperties>
+                </item>
+                <item guid="127e860c-0af1-48ba-9fbc-8ec9355c53c8" action="command" session="pol">
+                    <command>
+                        <body>ACT-USER::root:123::root;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties>
+                            <completeWhen inherit="false">TL1_EOM</completeWhen>
+                        </completionProperties>
+                    </applicationProperties>
+                </item>
+                <item guid="c57154ed-e054-4ca7-b439-4dba15a7e509" action="command" session="pol">
+                    <command>
+                        <body>RTRV-INV::OCS:123:;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties>
+                            <completeWhen inherit="false">TL1_EOM</completeWhen>
+                        </completionProperties>
+                    </applicationProperties>
+                </item>
+                <item guid="c3217251-8c28-41c2-956e-90445184ce82" action="command" session="pol">
+                    <command>
+                        <body>RTRV-IFC:::123:;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties>
+                            <completeWhen inherit="false">TL1_EOM</completeWhen>
+                        </completionProperties>
+                    </applicationProperties>
+                </item>
+                <item guid="d94e54b8-7c02-409b-b37d-dffd0be4602a" action="command" session="pol">
+                    <command>
+                        <body>RTRV-PATCH:::123:;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties>
+                            <completeWhen inherit="false">TL1_EOM</completeWhen>
+                        </completionProperties>
+                    </applicationProperties>
+                </item>
+                <item guid="7a41621e-147d-42f9-9411-00933bb38d7a" action="command" session="pol">
+                    <command>
+                        <body>RTRV-NETYPE:::123:;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties>
+                            <completeWhen inherit="false">TL1_EOM</completeWhen>
+                        </completionProperties>
+                    </applicationProperties>
+                </item>
+                <item guid="408b7def-c1a5-424c-bee3-e9164df64a99" action="command" session="pol">
+                    <command>
+                        <body>CANC-USER::root:123:;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties>
+                            <completeWhen inherit="false">TL1_EOM</completeWhen>
+                        </completionProperties>
+                    </applicationProperties>
+                </item>
+                <item guid="c742bdaa-7b23-4bbe-8710-be59f601ebbf" action="close" session="pol">
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+            </steps>
+        </item>
+    </procedures>
+</testCase>

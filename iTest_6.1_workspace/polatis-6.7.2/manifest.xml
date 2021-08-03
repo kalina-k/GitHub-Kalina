@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourceDriver>
+    <manifestVersion>1.4</manifestVersion>     
+    <version>6.7.2</version>
+    <vendor>Spirent</vendor>     
+    <language>itest</language>     
+    <interface>Layer 1 Switch</interface> 
+    <entryPoint>polatis-6.7.2.fftc</entryPoint>
+    <resourceProperties>     
+        <property optional="true">
+            <name>ipAddress</name>
+            <description>IP address of the remote device</description>
+        </property>
+		<property optional="true">
+            <name>Hostname</name>
+            <description>Hostname of the remote device</description>
+        </property>       
+        <property>
+            <name>polatisUsername</name>
+            <description>Username to login to switch TL1 session</description>
+        </property>        
+        <property optional="true">
+            <name>polatisPassword</name>
+            <description>Password to login to switch TL1 session</description>
+        </property>  
+        <property optional="true"> 
+        	<name>TL1 Port</name>
+        	<description>Port for TL1 connection</description>
+    	</property>
+    </resourceProperties>
+</resourceDriver>

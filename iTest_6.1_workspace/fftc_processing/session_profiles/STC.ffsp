@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<SessionTemplate version="4.3.1.73463">
+    <baseApplication>com.fnfr.svt.applications.spirent.testcenter.gui</baseApplication>
+    <sessionProperties type="com.fnfr.svt.adapter.automation.tools.common.documents.TransferableDocumentObject" transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.TestCenterGUISessionProperties" ports="//10.8.229.135/1/1 //10.8.237.99/1/1" ports.inherit="false">
+        <configurePort transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.ConfigurePortProperties" duplexMode="FULL" duplexMode.inherit="false" dataPathMode="NORMAL" dataPathMode.inherit="false"/>
+        <configureCustom16bitFilter transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.Analyzer16BitFilterProperties" mask="ffff" mask.inherit="false" endOfRange="ffff" endOfRange.inherit="false"/>
+        <configureStreamBlock transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.StreamBlockProperties" frameLengthMode="INCR" frameLengthMode.inherit="false" enableFcsErrorInsertion="false" enableFcsErrorInsertion.inherit="false">
+            <endpointProperties transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.StreamBlockEndpointProperties">
+                <destinations inherit="false" transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui">
+                    <memberClasses>
+                        <item>com.fnfr.itest.applications.spirent.testcenter.properties.StreamBlockEndpointProperties$DestinationEntry</item>
+                    </memberClasses>
+                    <item transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.StreamBlockEndpointProperties$DestinationEntry"/>
+                </destinations>
+            </endpointProperties>
+        </configureStreamBlock>
+    </sessionProperties>
+    <nickName>stc</nickName>
+</SessionTemplate>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<testCase version="6.1.0.863d7a9">
+    <testbed>project://播放列表/new_topology列表.tbml</testbed>
+    <procedures>
+        <item name="main"/>
+    </procedures>
+</testCase>

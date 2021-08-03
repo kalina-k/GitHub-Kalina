@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ResponseMapCatalog version="8.5.0.202103021747">
+    <mapCatalog>
+        <item name="response_maps/ansible-playbook.ffrm">
+            <applicability actionType="command" command="run ansible-playbook *"/>
+        </item>
+        <item name="response_maps/cat_proc_net_dev.ffrm">
+            <applicability actionType="command" command="cat /proc/net/dev"/>
+        </item>
+        <item name="response_maps/ifconfig-a-s.ffrm">
+            <applicability actionType="command" command="ifconfig -a -s*"/>
+        </item>
+    </mapCatalog>
+</ResponseMapCatalog>

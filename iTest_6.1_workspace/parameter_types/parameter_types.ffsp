@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<SessionTemplate version="6.1.0.863d7a9">
+    <baseApplication>com.fnfr.svt.applications.tclsh</baseApplication>
+    <sessionProperties type="com.fnfr.svt.applications.tclsh.TclshSessionProperties"/>
+    <parameters version="6.1.0.863d7a9">
+        <parameters escape="true">
+            <parameters xmlns:pt="http://www.fnfr.com/schemas/parameterTree">
+                <textparam>testtext</textparam>
+                <integerparam pt:datatype="INTEGER">1234</integerparam>
+                <booleantrueparam pt:datatype="BOOLEAN">true</booleantrueparam>
+                <booleanfalseparam pt:datatype="BOOLEAN">false</booleanfalseparam>
+                <doubleparam pt:datatype="DOUBLE">1.2</doubleparam>
+                <enumparam0 pt:datatype="parametersType0">Item0</enumparam0>
+                <enumparam1 pt:datatype="parametersType1">Item1-pt1</enumparam1>
+                <textmasked pt:mask="true">6tgA3NkRPCMJor6ZZIWzzg==</textmasked>
+            </parameters>
+        </parameters>
+        <parametersTypes>
+            <item name="parametersType0">
+                <items>
+                    <item name="Item0">
+                        <description>Item0 description</description>
+                    </item>
+                    <item name="Item1">
+                        <description>Item1 description1</description>
+                    </item>
+                </items>
+            </item>
+            <item name="parametersType1">
+                <items>
+                    <item name="Item0-pt1">
+                        <description>Item0-pt1 description</description>
+                    </item>
+                    <item name="Item1-pt1">
+                        <description>Item1-pt1 description</description>
+                    </item>
+                </items>
+            </item>
+        </parametersTypes>
+    </parameters>
+</SessionTemplate>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ResponseMapCatalog version="8.0.1.0">
+    <mapCatalog>
+        <item name="response_maps/Device_Info__.ffrm">
+            <applicability actionType="eval" command="tbml query *&apos;Device Info&apos;*"/>
+        </item>
+    </mapCatalog>
+</ResponseMapCatalog>

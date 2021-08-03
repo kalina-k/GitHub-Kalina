@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<SessionTemplate version="6.1.0.863d7a9">
+    <baseApplication>com.fnfr.svt.applications.telnet</baseApplication>
+    <sessionProperties type="com.fnfr.svt.applications.telnet.documents.TelnetSessionProperties">
+        <ipAddress inherit="false">localhost</ipAddress>
+        <port inherit="false">22002
+</port>
+        <negOpt inherit="false">false</negOpt>
+        <TerminalProperties>
+            <stepDefaults>
+                <completionProperties>
+                    <completeWhen inherit="false">TIMED</completeWhen>
+                    <waitForFirstCharBeforeIdle inherit="false">false</waitForFirstCharBeforeIdle>
+                    <completionTime inherit="false">1</completionTime>
+                </completionProperties>
+                <implicitCrWithLf inherit="false">true</implicitCrWithLf>
+            </stepDefaults>
+            <style inherit="false">TL1</style>
+        </TerminalProperties>
+        <rawClient inherit="false">true</rawClient>
+    </sessionProperties>
+    <nickName>pol_tel</nickName>
+</SessionTemplate>

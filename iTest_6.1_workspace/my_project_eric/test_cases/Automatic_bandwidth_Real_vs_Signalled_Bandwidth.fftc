@@ -1,0 +1,1652 @@
+<?xml version="1.0"?>
+<testCase version="5.1.0.77511">
+    <general>
+        <owner>Vikash</owner>
+    </general>
+    <testbed>project://t_Google_Automation/topologies/Google_5_3_0_TB2.tbml</testbed>
+    <procedures>
+        <item>
+            <steps>
+                <item guid="36004e0c-4fc4-4866-b7e5-b46ca4c43926" action="open" session="router1">
+                    <command>
+                        <body>device:router1#ssh</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.OpenStepPropertyGroup">
+                        <stepProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                            <completionProperties expectedIdleTime="0.213" expectedIdleTime.inherit="false"/>
+                        </stepProperties>
+                        <sessionProperties type="com.fnfr.svt.applications.ssh.documents.SSHProperties"/>
+                        <sessionClass type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    </applicationProperties>
+                </item>
+                <item guid="41de3165-d3c9-4718-9995-edf190013572" action="set_terminal_width" session="router1" normalOffset="0.33" estimatedStepExecutionTime="4.697">
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="4e989f59-55ba-4c80-80fa-8b3a6cab864a" action="command" session="router1" normalOffset="4.697" estimatedStepExecutionTime="0.404">
+                    <command>
+                        <body>show version</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.202" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="753f1be4-6a38-4141-af1c-bb6c8a7ab345" action="command" session="router1" normalOffset="5.748" estimatedStepExecutionTime="0.406">
+                    <command>
+                        <body>show install active</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.838" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="d12efb17-4c9b-4164-96f9-a683cb7f5fb3" action="command" session="router1" normalOffset="10.289" estimatedStepExecutionTime="0.507">
+                    <command>
+                        <body>show platform</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="6.206" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="5a50ea02-abeb-4ce1-b257-7a2526698619" action="command" session="router1" normalOffset="52.108" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>!#we need to deactivate all mid tunnels on D9 using up BE91 BW and BE15 BW on D1. </body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.484" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="9f010635-5d03-449c-a429-2fc8bf3c29c8" action="command" session="router1" normalOffset="51.629" estimatedStepExecutionTime="0.211">
+                    <command>
+                        <body>!#On D5 shut BE12, BE95, BE35 and BE58</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.096" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="63037a99-7c35-4196-a09b-979b7c0b5a49" action="command" session="router1" normalOffset="20.221" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>!#On D9 shut BE92, BE93 and BE94</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.368" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="b6a3f594-a87b-4046-ba7b-210c20e39144" action="command" session="router1" normalOffset="17.968" estimatedStepExecutionTime="0.208">
+                    <command>
+                        <body>!#On D8 shut BE18</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.37" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="cc3dbd2c-c9c9-4790-a03f-2d23fe71fbf0" action="command" session="router1" normalOffset="27.34" estimatedStepExecutionTime="0.21">
+                    <command>
+                        <body>!#This ensures no tunnel from D4, D5, D2, D3 uses D9</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.003" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="4cdb25f0-e7d2-40cd-a128-7c7241246fcb" action="open" session="router5" normalOffset="27.272">
+                    <command>
+                        <body>device:router5#ssh</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.OpenStepPropertyGroup">
+                        <stepProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                        <sessionProperties type="com.fnfr.svt.applications.ssh.documents.SSHProperties"/>
+                        <sessionClass type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    </applicationProperties>
+                </item>
+                <item guid="14f33321-ed0f-4da3-9501-ed7580c3837d" action="open" session="router3" normalOffset="16.675">
+                    <command>
+                        <body>device:router3#ssh</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.OpenStepPropertyGroup">
+                        <stepProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                            <completionProperties expectedIdleTime="0.19" expectedIdleTime.inherit="false"/>
+                        </stepProperties>
+                        <sessionProperties type="com.fnfr.svt.applications.ssh.documents.SSHProperties"/>
+                        <sessionClass type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    </applicationProperties>
+                </item>
+                <item guid="ab30ffc1-8b14-4c6d-8edf-1b007a1da887" action="set_terminal_width" session="router3" normalOffset="0.469" estimatedStepExecutionTime="0.685">
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="9e4a55cd-e496-4f60-aaf7-eb3375692ec3" action="command" session="router3" normalOffset="6.467" estimatedStepExecutionTime="0.245">
+                    <command>
+                        <body>conf t</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.761" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="719d8f54-24e4-4c25-ab38-dd5850940f2a" action="command" session="router3" normalOffset="25.324" estimatedStepExecutionTime="0.044">
+                    <command>
+                        <body>interface bundle-ether 12</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="3.355" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="1deca880-de90-46cd-a3dd-bf5955290d2a" action="command" session="router3" normalOffset="4.15" estimatedStepExecutionTime="0.045">
+                    <command>
+                        <body>shutdown</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.133" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="ad1cb5e4-101f-4e45-832a-08e2b588118e" action="command" session="router3" normalOffset="5.984" estimatedStepExecutionTime="0.045">
+                    <command>
+                        <body>interface bundle-ether 95</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.487" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="14eef37b-f0c0-42d3-869e-e65eccb5403d" action="command" session="router3" normalOffset="10.387" estimatedStepExecutionTime="0.045">
+                    <command>
+                        <body>shutdown</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="8.251" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="1ce785a6-829f-4a34-972d-02c3c1522258" action="command" session="router3" normalOffset="9.73" estimatedStepExecutionTime="0.045">
+                    <command>
+                        <body>interface bundle-ether 35</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.424" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="ce94bf26-65b5-4c12-bcf4-98a948b4b2dc" action="command" session="router3" normalOffset="2.08" estimatedStepExecutionTime="0.044">
+                    <command>
+                        <body>shutdown</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.339" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="f8b8387a-f59c-4b96-94a6-3f3b063f3591" action="command" session="router3" normalOffset="6.617" estimatedStepExecutionTime="0.044">
+                    <command>
+                        <body>interface bundle-ether 58</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.303" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="d18cafea-e675-4e2d-afaf-d68b6616ae5d" action="command" session="router3" normalOffset="1.936" estimatedStepExecutionTime="0.044">
+                    <command>
+                        <body>shutdown</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.306" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="60bb3cef-ef6b-4848-8c56-366c55d34a15" action="command" session="router3" normalOffset="8.422" estimatedStepExecutionTime="0.25">
+                    <command>
+                        <body>show commit changes diff</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.273" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="9c958411-e980-4911-b722-1f453dde44f5" action="command" session="router3" normalOffset="7.92" estimatedStepExecutionTime="0.535">
+                    <command>
+                        <body>commit</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.492" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="d446053e-a057-4382-bf51-3a2bc6ebf35a" action="command" session="router3" normalOffset="4.19" estimatedStepExecutionTime="0.241">
+                    <command>
+                        <body>end</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.196" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="f1257e3a-8e6f-4983-9814-090b1df9a20e" action="command" session="router3" normalOffset="7.192" estimatedStepExecutionTime="0.996">
+                    <command>
+                        <body>show interfaces brief | i BE</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.516" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="8959810f-79da-4cf6-98db-cf2d7af6bff2" action="command" session="router1" normalOffset="14.929" estimatedStepExecutionTime="4.893">
+                    <command>
+                        <body>conf t</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="3.81" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="fe0f6cd7-8b42-4143-aca1-bbc5e8e0bced" action="command" session="router1" normalOffset="13.346" estimatedStepExecutionTime="0.21">
+                    <command>
+                        <body>interface bundle-ether 92</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.305" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="6e9f815e-cfaf-4970-ba6e-fa4757be2acc" action="command" session="router1" normalOffset="4.992" estimatedStepExecutionTime="0.205">
+                    <command>
+                        <body>shutdown</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.839" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="5133f8ea-c7dd-4452-9cbf-abdfeb27d090" action="command" session="router1" normalOffset="3.546" estimatedStepExecutionTime="0.203">
+                    <command>
+                        <body>interface bundle-ether 93</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.202" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="7c2395b9-827d-40f8-9834-3d7b5a671238" action="command" session="router1" normalOffset="4.506" estimatedStepExecutionTime="0.274">
+                    <command>
+                        <body>shutdown</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.316" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="7534a24c-d0cc-403f-8d55-920050a5515f" action="command" session="router1" normalOffset="4.218" estimatedStepExecutionTime="0.197">
+                    <command>
+                        <body>interface bundle-ether 94</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.195" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="08cf7300-84c4-4736-b372-4343da4b1cb9" action="command" session="router1" normalOffset="1.867" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>shutdown</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.746" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="ffb3c5cb-3627-4af1-bcea-b6f7d4c08781" action="command" session="router1" normalOffset="4.827" estimatedStepExecutionTime="0.674">
+                    <command>
+                        <body>show commit changes diff</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.269" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="64812852-2ae1-492f-92e7-a4c7b2538e22" action="command" session="router1" normalOffset="6.905" estimatedStepExecutionTime="0.906">
+                    <command>
+                        <body>commit</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.342" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="744888f4-3113-41c3-a810-b27ade60aa78" action="command" session="router1" normalOffset="1.851" estimatedStepExecutionTime="0.195">
+                    <command>
+                        <body>end</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.193" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="ca29852e-b69e-482d-9585-271d28017ffb" action="command" session="router1" normalOffset="7.49" estimatedStepExecutionTime="0.824">
+                    <command>
+                        <body>show inter brief | i BE</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.424" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="da5b1cbc-5e58-483f-abbd-ea27b2080018" action="open" session="router8" normalOffset="14.627">
+                    <command>
+                        <body>device:router8#ssh</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.OpenStepPropertyGroup">
+                        <stepProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                        <sessionProperties type="com.fnfr.svt.applications.ssh.documents.SSHProperties"/>
+                        <sessionClass type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    </applicationProperties>
+                </item>
+                <item guid="1e974580-de41-4311-9168-920c695047fd" action="set_terminal_width" session="router8" normalOffset="0.997" estimatedStepExecutionTime="0.642">
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="6aa3bf7d-a97d-4f66-8e14-961bbc62bafe" action="open" session="router4" normalOffset="7.709">
+                    <command>
+                        <body>device:router4#ssh</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.OpenStepPropertyGroup">
+                        <stepProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                        <sessionProperties type="com.fnfr.svt.applications.ssh.documents.SSHProperties"/>
+                        <sessionClass type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    </applicationProperties>
+                </item>
+                <item guid="67591ce0-49b8-4a22-8ff8-694cfc7115db" action="set_terminal_width" session="router4" normalOffset="1.798" estimatedStepExecutionTime="0.708">
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="d93993d0-5865-414f-ab14-0ac4eb0ab04d" action="command" session="router4" normalOffset="1.34" estimatedStepExecutionTime="0.246">
+                    <command>
+                        <body>conf t</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.202" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="7f2ae9dc-bd5c-4ebe-8299-aeadfb677bc8" action="command" session="router4" normalOffset="14.975" estimatedStepExecutionTime="0.044">
+                    <command>
+                        <body>interface bundle-ether 18</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.487" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="d7221b86-8487-4e1e-bac2-33b8b7c86cbd" action="command" session="router4" normalOffset="2.387" estimatedStepExecutionTime="0.044">
+                    <command>
+                        <body>shutdown</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.249" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="6b234448-6de6-4d5a-8754-f12e47f0b5c8" action="command" session="router4" normalOffset="6.508" estimatedStepExecutionTime="0.247">
+                    <command>
+                        <body>show commit changes diff</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.84" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="155a8733-5f96-404e-8d75-32c08519ba16" action="command" session="router4" normalOffset="2.899" estimatedStepExecutionTime="0.482">
+                    <command>
+                        <body>commit</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.438" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="111f3f4d-bd7b-4117-a446-ec8671391da4" action="command" session="router4" normalOffset="1.858" estimatedStepExecutionTime="0.044">
+                    <command>
+                        <body>end</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties>
+                            <completeWhen inherit="false">AUTO_OR_IDLE</completeWhen>
+                            <waitForFirstCharBeforeIdle inherit="false">false</waitForFirstCharBeforeIdle>
+                        </completionProperties>
+                    </applicationProperties>
+                </item>
+                <item guid="bad0b8af-d46c-4ef0-a66f-8f6163bf327b" action="command" session="router4" normalOffset="6.926" estimatedStepExecutionTime="0.614">
+                    <command>
+                        <body>show inter[char TAB]bri[char TAB]| i BE</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.366" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="500b187d-c956-4d66-9ac5-ccce0dca35fe" action="command" session="router1" normalOffset="66.296" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>!#Wait for some so that all mid tunnels go away</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.409" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="b83ce0d5-fe13-48cc-867a-17e81637d24f" action="command" session="router1" normalOffset="474.23" estimatedStepExecutionTime="16.19">
+                    <command>
+                        <body>show mpls traffic-eng tunnels summary</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="15.248" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="53c68885-8c1a-4f5c-bcb0-733836dcbb66" action="command" session="router1" normalOffset="10254.443" estimatedStepExecutionTime="10.465">
+                    <command>
+                        <body>show mpls traffic-eng tunnels summary</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="9.508" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="c3d77415-908d-4535-8f1f-4c4c92fedb74" action="command" session="router1" normalOffset="51.943" estimatedStepExecutionTime="9.436">
+                    <command>
+                        <body>show route 11.66.2.3</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="3.816" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="bf4782fd-371a-4a01-9a20-238e6c094e6e" action="command" session="router1" normalOffset="0.487" estimatedStepExecutionTime="0.201">
+                    <command>
+                        <body>
+</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.198" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="5d2de880-fa4b-47b7-a4ad-a531a9b176be" action="command" session="router1" normalOffset="2.884" estimatedStepExecutionTime="3.698">
+                    <command>
+                        <body>sh mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.583" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="843ec988-c104-48d1-8ca0-04026638e2b1" action="command" session="router1" normalOffset="5.125" estimatedStepExecutionTime="3.533">
+                    <command>
+                        <body>sh mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05031</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.734" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="77789e4e-f467-42f6-9695-f9f9f5636cfc" action="command" session="router1" normalOffset="35.611" estimatedStepExecutionTime="13.321">
+                    <command>
+                        <body>sh mpls traffic-eng tunnels name google_D9-google_D6-LOPRI-04001</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="6.97" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="dc37bcfc-7eb9-47e4-b9e7-0442a5841252" action="command" session="router1" normalOffset="5.769" estimatedStepExecutionTime="4.042">
+                    <command>
+                        <body>sh mpls traffic-eng tunnels name google_D9-google_D6-LOPRI-04031</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.299" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="6ca4666e-748b-4f37-a333-5df71fa34419" action="command" session="router1" normalOffset="84.37" estimatedStepExecutionTime="3.697">
+                    <command>
+                        <body>sh runn group GOOGLE-BACKBONE-MPLS-PBTS-HI</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.927" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="9d64633d-11b1-4cf5-b52a-a3d97db4d4cc" action="command" session="router1" normalOffset="36.65" estimatedStepExecutionTime="16.325">
+                    <command>
+                        <body>sh runn group GOOGLE-BACKBONE-MPLS-PBTS-LO</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="15.563" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="84be0cd9-357e-49a0-b7eb-9623391de360" action="command" session="router1" normalOffset="3.16" estimatedStepExecutionTime="4.946">
+                    <command>
+                        <body>conf t</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.018" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="9f69e0bd-bda5-481e-8923-8c8f54a574ed" action="command" session="router1" normalOffset="16.087" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>group GOOGLE-BACKBONE-MPLS-PBTS-HI</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.081" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="f72a93b4-faa5-4110-a43b-1633852fcacd" action="command" session="router1" normalOffset="31.929" estimatedStepExecutionTime="0.212">
+                    <command>
+                        <body>mpls traffic-eng named-tunnels tunnel-te &apos;google_D9.*-HIPRI-\\[0-9]\\[0-9]\\[0-9]\\[0-9]\\[0-9]&apos;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.105" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="5d6e87c4-831a-4eb1-97e6-ef356d36c44a" action="command" session="router1" normalOffset="30.337" estimatedStepExecutionTime="0.211">
+                    <command>
+                        <body>auto-bw bw-limit min 200 max 100000000</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="8.522" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="f95571ac-abbd-4354-8d19-eedfcb2189ad" action="command" session="router1" normalOffset="22.451" estimatedStepExecutionTime="0.211">
+                    <command>
+                        <body>adjustment-threshold 10 min 10</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.081" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="d2108880-0801-438a-a857-1a06d942f32f" action="command" session="router1" normalOffset="10.927" estimatedStepExecutionTime="0.195">
+                    <command>
+                        <body>auto-bw</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.288" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="1d466723-9876-4b8c-b131-e43d08becf13" action="command" session="router1" normalOffset="4.848" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>adjustment-threshold 10 min 10</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.127" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="30c24f0c-8083-42a5-86df-c479173096e8" action="command" session="router1" normalOffset="11.058" estimatedStepExecutionTime="0.204">
+                    <command>
+                        <body>application 5</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.202" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="33462bb6-6fcd-47a6-8cf3-acfdbc9f4d49" action="command" session="router1" normalOffset="2.252" estimatedStepExecutionTime="0.212">
+                    <command>
+                        <body>root</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.416" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="130c3120-60df-482e-9edb-984d676d54f8" action="command" session="router1" normalOffset="9.054" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>group GOOGLE-BACKBONE-MPLS-PBTS-LO</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.358" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="1cc1f7a0-a902-45b7-9f37-d95f2e3c4454" action="command" session="router1" normalOffset="45.52" estimatedStepExecutionTime="9.372">
+                    <command>
+                        <body>mpls traffic-eng named-tunnels tunnel-te &apos;google_D9.*-LOPRI-\\[0-9]\\[0-9]\\[0-9]\\[0-9]\\[0-9]&apos;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="8.833" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="61be43bd-fefe-4a9e-8baa-97a96b1cf3d9" action="command" session="router1" normalOffset="18.105" estimatedStepExecutionTime="0.205">
+                    <command>
+                        <body>auto-bw</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.561" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="5e328f9c-3a39-4826-9f82-0f034cb60f0f" action="command" session="router1" normalOffset="4.049" estimatedStepExecutionTime="0.204">
+                    <command>
+                        <body>bw-limit min 200 max 100000000</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.678" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="449e3cf9-5e67-4100-9d93-7f5e55e8a496" action="command" session="router1" normalOffset="11.856" estimatedStepExecutionTime="0.203">
+                    <command>
+                        <body>adjustment-threshold 10 min 10</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.049" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="1d876d1d-b209-4f94-879b-35e34575bf72" action="command" session="router1" normalOffset="9.403" estimatedStepExecutionTime="0.212">
+                    <command>
+                        <body>application 5</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.36" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="99a6e02c-7982-40d7-a803-a1081cdf3c4c" action="command" session="router1" normalOffset="14.438" estimatedStepExecutionTime="0.727">
+                    <command>
+                        <body>show commit changes diff</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="3.051" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="db3dd30c-7aeb-4307-8b5e-13d7b2762de5" action="command" session="router1" normalOffset="19.039" estimatedStepExecutionTime="6.552">
+                    <command>
+                        <body>commit</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="6.35" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="37eba753-ae38-448f-b95d-cb362a5453ef" action="command" session="router1" normalOffset="6.414" estimatedStepExecutionTime="0.209">
+                    <command>
+                        <body>end</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.286" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="a872f637-e6e0-487b-ab52-7f17b27b8ac9" action="command" session="router1" normalOffset="28.734" estimatedStepExecutionTime="3.269">
+                    <command>
+                        <body>sh runn group GOOGLE-BACKBONE-MPLS-PBTS-HI</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="17.969" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="cd4bee1f-0f9c-491f-ae55-d038fb3fb10d" action="command" session="router1" normalOffset="4.958" estimatedStepExecutionTime="3.188">
+                    <command>
+                        <body>sh runn group GOOGLE-BACKBONE-MPLS-PBTS-LO</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.421" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="8c3b4f4b-b1b3-41c1-986b-f82226b2ab94" action="command" session="router1" normalOffset="122.366" estimatedStepExecutionTime="0.212">
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.209" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="015bf545-52b6-476b-9a9e-3df195f05832" action="command" session="router1" normalOffset="6.846" estimatedStepExecutionTime="8.649">
+                    <command>
+                        <body>show route 11.66.2.3</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.014" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="4f5841dc-f85d-475b-a7c2-97982893996c" action="command" session="router1" normalOffset="252.858" estimatedStepExecutionTime="12.756">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.021" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="badf863c-8752-4ad7-8dd4-7d842356c2f9" action="command" session="router1" normalOffset="26.026" estimatedStepExecutionTime="0.405">
+                    <command>
+                        <body>show interfaces tunnel-te google_D9-google_D6-HIPRI-05001</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.5" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="e06fb1e2-bb71-477e-a389-cff895fa2444" action="command" session="router1" normalOffset="78.683" estimatedStepExecutionTime="5.277">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05031</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.805" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="5698dfb4-fd91-4082-993b-82e87118ec27" action="command" session="router1" normalOffset="29.152" estimatedStepExecutionTime="3.678">
+                    <command>
+                        <body>show interfaces tunnel-te google_D9-google_D6-HIPRI-05031</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="7.362" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="b08e7cdb-285b-49fa-b65c-145390f5e60d" action="command" session="router1" normalOffset="153.603" estimatedStepExecutionTime="4.721">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="13.199" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="10abc53a-4dd1-4a51-8d1d-8d6f2ef1492a" action="command" session="router1" normalOffset="10.417" estimatedStepExecutionTime="0.728">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.325" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="cb2177b5-9030-49e7-8849-ea68d3312380" action="command" session="router1" normalOffset="15.185" estimatedStepExecutionTime="0.713">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.158" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="a04c4667-e0ce-4b0c-813c-dd4eb8a14aa4" action="command" session="router1" normalOffset="7.866" estimatedStepExecutionTime="0.706">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.073" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="ec01130a-d41b-4aad-b4d1-6602ba6fce2e" action="command" session="router1" normalOffset="686.661" estimatedStepExecutionTime="4.721">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="455.902" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="05457a64-592d-434a-9192-13a42f8487fa" action="command" session="router1" normalOffset="8.095" estimatedStepExecutionTime="0.716">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.362" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="7f02329c-009e-41ae-ad49-bc18cc41fd00" action="command" session="router1" normalOffset="20.012" estimatedStepExecutionTime="0.711">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="3.756" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="a9c54f75-adaf-48af-8395-3a0a2c7e2228" action="command" session="router1" normalOffset="20.825" estimatedStepExecutionTime="0.714">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="3.626" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="784fb69c-bf83-40cb-a384-d0bf55fc5f7f" action="command" session="router1" normalOffset="359.72" estimatedStepExecutionTime="0.203">
+                    <command>
+                        <body>conf t</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties>
+                            <completeWhen inherit="false">AUTO_OR_IDLE</completeWhen>
+                            <waitForFirstCharBeforeIdle inherit="false">false</waitForFirstCharBeforeIdle>
+                        </completionProperties>
+                    </applicationProperties>
+                </item>
+                <item guid="b76f74e9-efe2-485c-9a51-49e80d2d1e97" action="command" session="router1" normalOffset="16.677" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>group GOOGLE-BACKBONE-MPLS-PBTS-HI</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="10.811" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="39510110-a13e-44cd-8d59-014636662396" action="command" session="router1" normalOffset="37.832" estimatedStepExecutionTime="0.52">
+                    <command>
+                        <body>mpls traffic-eng named-tunnels tunnel-te &apos;google_D9.*-HIPRI-\\[0-9]\\[0-9]\\[0-9]\\[0-9]\\[0-9]&apos;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="3.13" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="171411fc-41c1-4cb4-8eaf-72d802edb58e" action="command" session="router1" normalOffset="160.892" estimatedStepExecutionTime="0.212">
+                    <command>
+                        <body>signalled-bandwidth 516000</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="142.567" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="cd9449eb-5c4e-4d04-84f3-da5bdbecae13" action="command" session="router1" normalOffset="5.875" estimatedStepExecutionTime="3.578">
+                    <command>
+                        <body>show commit changes diff</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.848" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="412938d2-490f-40eb-abed-7dd83a1e4aff" action="command" session="router1" normalOffset="22.509" estimatedStepExecutionTime="0.826">
+                    <command>
+                        <body>show commit changes diff</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.414" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="39c76ace-ed8f-4b38-ad92-f3e94d3e62ca" action="command" session="router1" normalOffset="10.179" estimatedStepExecutionTime="1.376">
+                    <command>
+                        <body>commit</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="3.783" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="4649150b-814c-440e-988b-ef316d4ae596" action="command" session="router1" normalOffset="2.841" estimatedStepExecutionTime="0.203">
+                    <command>
+                        <body>end</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.201" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="80acb188-56c6-49fd-91aa-2c181c6f472e" action="command" session="router1" normalOffset="25.364" estimatedStepExecutionTime="6.822">
+                    <command>
+                        <body>sh runn group GOOGLE-BACKBONE-MPLS-PBTS-HI</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="5.885" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="4fc1c954-d048-4cdb-908a-3c7b67ad11e8" action="command" session="router1" normalOffset="54.493" estimatedStepExecutionTime="4.728">
+                    <command>
+                        <body>show rsvp interface BE91</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.074" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="be3ac28d-7b8e-4cc0-981b-f13dd3d9f055" action="command" session="router1" normalOffset="5.74" estimatedStepExecutionTime="0.701">
+                    <command>
+                        <body>show rsvp interface BE98</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.302" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="52fb7be8-140e-4916-8095-52c100541120" action="command" session="router1" normalOffset="118.393" estimatedStepExecutionTime="11.192">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 detail</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.312" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="0fbe03af-172d-424c-a89e-4b514eb49a77" action="command" session="router1" normalOffset="19.083" estimatedStepExecutionTime="1.004">
+                    <command>
+                        <body>conf t</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.928" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="652722ef-f222-4666-8e62-ef2c4822dae9" action="command" session="router1" normalOffset="4.486" estimatedStepExecutionTime="0.212">
+                    <command>
+                        <body>mpls traffic-eng</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.798" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="6eeaa82e-9462-482a-890c-7cbc83f08257" action="command" session="router1" normalOffset="3.096" estimatedStepExecutionTime="0.212">
+                    <command>
+                        <body>named-tunnels</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.218" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="865b6dd5-38f1-4b11-889a-acd570295dc0" action="command" session="router1" normalOffset="10.647" estimatedStepExecutionTime="0.212">
+                    <command>
+                        <body>tunnel-te google_D9-google_D6-HIPRI-05032</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.723" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="d88169a5-6b7b-489b-9d3a-3a9534967228" action="command" session="router1" normalOffset="9.907" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>path-option DYNAMIC</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.866" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="652de105-2a78-4c8f-8ce0-c7d365ea67a5" action="command" session="router1" normalOffset="4.937" estimatedStepExecutionTime="0.206">
+                    <command>
+                        <body>preference 10</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.261" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="a48eb19a-7871-4d1b-829c-29d81ab8aef5" action="command" session="router1" normalOffset="5.863" estimatedStepExecutionTime="0.205">
+                    <command>
+                        <body>computation dynamic</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.699" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="48093ea0-d016-4657-8206-8cc1c0e7ac31" action="command" session="router1" normalOffset="2.15" estimatedStepExecutionTime="0.204">
+                    <command>
+                        <body>!</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.727" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="dc997cbe-ab90-41cb-ab63-49bd985abd99" action="command" session="router1" normalOffset="9.55" estimatedStepExecutionTime="0.205">
+                    <command>
+                        <body>priority 1 1</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.203" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="942f31f6-9a68-4420-b68d-8e750d8521b2" action="command" session="router1" normalOffset="12.852" estimatedStepExecutionTime="0.203">
+                    <command>
+                        <body>signalled-bandwidth 63000000</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.832" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="04c19335-7ecc-4dcc-b7d1-4e3da638d0ff" action="command" session="router1" normalOffset="11.39" estimatedStepExecutionTime="0.198">
+                    <command>
+                        <body>autoroute announce metric 5</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.196" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="59096042-5b32-409e-9708-3376546aa13c" action="command" session="router1" normalOffset="20.278" estimatedStepExecutionTime="0.205">
+                    <command>
+                        <body>autoroute announce include-ipv6</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.342" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="1c0325db-66e2-4521-bdaf-43c05f5483ea" action="command" session="router1" normalOffset="1.703" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>!</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.352" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="de2a4f06-b99e-45be-801f-502483eed3e7" action="command" session="router1" normalOffset="26.605" estimatedStepExecutionTime="0.203">
+                    <command>
+                        <body>destination 11.255.255.6</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.754" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="25c8f689-0177-447e-a4b5-e097892a8f17" action="command" session="router1" normalOffset="13.806" estimatedStepExecutionTime="0.21">
+                    <command>
+                        <body>exit</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.397" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="fc0896c5-3d10-4729-b4c0-355f3dd1ad95" action="command" session="router1" normalOffset="4.062" estimatedStepExecutionTime="0.203">
+                    <command>
+                        <body>destination 11.255.255.6</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.771" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="2ad7a56a-4b51-4539-81fb-e5ee67af688b" action="command" session="router1" normalOffset="57.081" estimatedStepExecutionTime="4.018">
+                    <command>
+                        <body>named-tunnels tunnel-te google_D9-google_D6-HIPRI-05032</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.015" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="0ad0bb43-d5a5-4039-b242-b33269862276" action="command" session="router1" normalOffset="3.287" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>destination 11.255.255.6</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.869" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="3a7917a8-c5ba-40d3-99b4-fb3f076789e1" action="command" session="router1" normalOffset="13.024" estimatedStepExecutionTime="0.196">
+                    <command>
+                        <body>fast-reroute protect node</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.194" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="2fdb5100-edac-42fb-b162-f84b83cf9145" action="command" session="router1" normalOffset="1.422" estimatedStepExecutionTime="0.204">
+                    <command>
+                        <body>   record-route</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.201" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="8390f018-3329-44af-938c-34ebf1d30533" action="command" session="router1" normalOffset="0.321" estimatedStepExecutionTime="0.21">
+                    <command>
+                        <body>   soft-preemption</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.208" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="08b8f51e-0d26-4382-8072-01b225de9ecc" action="command" session="router1" normalOffset="0.166" estimatedStepExecutionTime="0.195">
+                    <command>
+                        <body>   load-interval 30</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.193" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="3bd6a941-0707-4514-82ac-83b8b4283e00" action="command" session="router1" normalOffset="0.344" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>   affinity exclude red</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.2" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="26fbd23b-d4f7-4aaa-8604-eef3af6ddf1f" action="command" session="router1" normalOffset="0.471" estimatedStepExecutionTime="0.204">
+                    <command>
+                        <body>   affinity exclude EDGE</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.202" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="ec6ff160-0ae1-41e5-916d-bdadafbe7da2" action="command" session="router1" normalOffset="0.355" estimatedStepExecutionTime="0.209">
+                    <command>
+                        <body>   affinity exclude METRO</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.206" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="dcd6eb26-031a-4f40-b040-b175de21419b" action="command" session="router1" normalOffset="0.904" estimatedStepExecutionTime="0.207">
+                    <command>
+                        <body>   affinity exclude ACCESS</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.205" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="4e33c8aa-1cca-4817-aa73-221b31b6773d" action="command" session="router1" normalOffset="0.143" estimatedStepExecutionTime="0.198">
+                    <command>
+                        <body>   affinity exclude orange</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.196" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="6702f4bd-5ae0-43ee-9e15-0ecfef4b5e16" action="command" session="router1" normalOffset="0.379" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>   affinity exclude PEERING</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.2" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="2b3d4618-4085-4060-a53c-95ff8f316384" action="command" session="router1" normalOffset="0.225" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>   affinity exclude TRANSOCEANIC</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.2" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="e0ff7e04-73e0-49da-931e-67433a04d37b" action="command" session="router1" normalOffset="0.733" estimatedStepExecutionTime="0.203">
+                    <command>
+                        <body>  !       </body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.201" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="f0dcb0b0-f8e7-40a2-96aa-c7d5d3555a2d" action="command" session="router1" normalOffset="0.197" estimatedStepExecutionTime="0.205">
+                    <command>
+                        <body> !</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.203" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="bc5c6f78-c72e-4875-8083-a99d6a37ae4d" action="command" session="router1" normalOffset="0.23" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>!</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.2" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="fe23d550-65c3-4198-8ac5-1beb9713d624" action="command" session="router1" normalOffset="23.195" estimatedStepExecutionTime="14.356">
+                    <command>
+                        <body>show commit changes diff</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="13.43" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="c7380b12-a172-4499-8a3a-b11b0a94312a" action="command" session="router1" normalOffset="36.826" estimatedStepExecutionTime="0.413">
+                    <command>
+                        <body>commit</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.208" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="218abb20-88d5-4798-bca5-743f286edd86" action="command" session="router1" normalOffset="2.723" estimatedStepExecutionTime="0.205">
+                    <command>
+                        <body>end</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.203" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="fe475d69-ccd5-458f-85ca-5aaa2be1660a" action="command" session="router1" normalOffset="28.278" estimatedStepExecutionTime="0.202">
+                    <command>
+                        <body>!#New tunnel takes D9-D1-D6 path</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.392" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="b55ff73e-16ef-4d98-959e-18514116885c" action="command" session="router1" normalOffset="14.542" estimatedStepExecutionTime="5.057">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05032</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.607" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="9df2eb5a-d2da-4d89-b2bd-d2513ff56021" action="command" session="router1" normalOffset="45.583" estimatedStepExecutionTime="5.432">
+                    <command>
+                        <body>!!#BE98 uses 16G now (most of the hipri takes BE98 now). </body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="7.142" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="181ddfa4-6834-4a85-a1f9-d404d79b26e5" action="command" session="router1" normalOffset="6.562" estimatedStepExecutionTime="7.735">
+                    <command>
+                        <body>show rsvp interface BE98</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.826" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="d795de19-f2ee-4937-b3ca-7aa43c317b45" action="command" session="router1" normalOffset="299.674" estimatedStepExecutionTime="0.693">
+                    <command>
+                        <body>show rsvp interface BE98</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.81" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="1c56164c-ecaf-4ed7-9af1-e7704b688edd" action="command" session="router1" normalOffset="36.883" estimatedStepExecutionTime="15.214">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.974" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="ccdedfe0-283d-4ce6-a293-5c648a3f6959" action="command" session="router1" normalOffset="7.381" estimatedStepExecutionTime="7.88">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05031</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.003" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="6378f835-819c-449b-a3fa-ef17c159bbc9" action="command" session="router1" normalOffset="5.846" estimatedStepExecutionTime="3.613">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05002</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.696" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="ed708187-d7f8-49cc-84d2-a03922ee37f4" action="command" session="router1" normalOffset="3.442" estimatedStepExecutionTime="4.212">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05002</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.329" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="f2d001e0-15d1-4423-aed1-0c4fdd1c5561" action="command" session="router1" normalOffset="40.213" estimatedStepExecutionTime="0.413">
+                    <command>
+                        <body>show interfaces tunnel-te google_D9-google_D6-HIPRI-05002</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.522" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="ebb00a4a-05b5-4a00-9e9e-601ff7ffb6b3" action="command" session="router1" normalOffset="8.244" estimatedStepExecutionTime="0.402">
+                    <command>
+                        <body>show interfaces tunnel-te google_D9-google_D6-HIPRI-05001</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.544" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="4b8e83de-f984-4eec-bfa2-e751bbf89768" action="command" session="router1" normalOffset="10.225" estimatedStepExecutionTime="0.688">
+                    <command>
+                        <body>show rsvp interface BE98</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.678" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="2c272c67-f535-43c6-9378-66c6b183a5d6" action="command" session="router1" normalOffset="43.285" estimatedStepExecutionTime="0.21">
+                    <command>
+                        <body>!#Tunnel google_D9-google_D6-HIPRI-05001 is preemted and taking new path through BE98</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.643" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="b8e46e04-d801-4f97-883e-48525b620b57" action="command" session="router1" normalOffset="20.946" estimatedStepExecutionTime="4.716">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.658" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="65fa0273-72e4-43fa-9925-fd437d860aac" action="command" session="router1" normalOffset="39.512" estimatedStepExecutionTime="0.715">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.937" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="84590dea-59cd-4ee0-be7b-f8fe9fb4b170" action="command" session="router1" normalOffset="11.432" estimatedStepExecutionTime="0.72">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.872" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="9686994c-5d39-4974-8ff0-3a0135757d98" action="command" session="router1" normalOffset="22.624" estimatedStepExecutionTime="0.709">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.663" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="e86ff26d-fc35-418c-bdb2-71c0c17c4821" action="command" session="router1" normalOffset="32.305" estimatedStepExecutionTime="0.711">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.753" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="cef0c67c-baea-41ea-94e1-957a49376f2d" action="command" session="router1" normalOffset="7.558" estimatedStepExecutionTime="0.714">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="5.076" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="d09ecc13-d89a-4655-86ea-9b835536f044" action="command" session="router1" normalOffset="4.538" estimatedStepExecutionTime="0.714">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.176" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="318de65c-1bb3-4daf-9cef-73c41e0b3db6" action="command" session="router1" normalOffset="40.032" estimatedStepExecutionTime="4.724">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.017" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="eb0de6cf-7e8e-489b-882b-ff2f8f2511b4" action="command" session="router1" normalOffset="97.631" estimatedStepExecutionTime="0.717">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.882" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="9d4d0402-dab8-423d-8b81-2c7c477bdf0f" action="command" session="router1" normalOffset="13.511" estimatedStepExecutionTime="0.716">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.182" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="eba00777-cdf7-40a5-822a-568d9540e930" action="command" session="router1" normalOffset="7.175" estimatedStepExecutionTime="0.716">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.787" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="3bbb1f0b-2f9f-44f0-ba73-445823f8a99d" action="command" session="router1" normalOffset="64.147" estimatedStepExecutionTime="4.818">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.016" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="69340597-34e2-41c3-99dd-36b001be9fd1" action="command" session="router1" normalOffset="37.187" estimatedStepExecutionTime="0.712">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="21.894" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="b14c4453-c9b5-46af-a68d-b1de870c1be6" action="command" session="router1" normalOffset="24.223" estimatedStepExecutionTime="0.716">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.361" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="2a575f9d-ced7-4e85-b352-ded1eb07812b" action="command" session="router1" normalOffset="8.039" estimatedStepExecutionTime="0.717">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.071" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="e3937d02-e537-407b-a0a4-6fa62fd84eec" action="command" session="router1" normalOffset="16.912" estimatedStepExecutionTime="0.706">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.248" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="2c28e560-fe94-4f47-9185-30dda301c0b1" action="command" session="router1" normalOffset="21.101" estimatedStepExecutionTime="0.711">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.199" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="3b8c9769-3e48-4780-8130-df582e140932" action="command" session="router1" normalOffset="181.95" estimatedStepExecutionTime="4.725">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.568" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="31ce3b7d-33f4-4918-9919-332c52a1a0fc" action="command" session="router1" normalOffset="15.01" estimatedStepExecutionTime="0.712">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.038" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="0c8bfe9a-dee5-4d31-b23d-6aedc7c7b610" action="command" session="router1" normalOffset="28.94" estimatedStepExecutionTime="0.716">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.285" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="2c903587-5ef1-48c4-9d34-5ebcd207c3ca" action="command" session="router1" normalOffset="19.851" estimatedStepExecutionTime="0.722">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.24" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="1b133994-f49c-46fc-a3d3-92abbe6a6adf" action="command" session="router1" normalOffset="3.484" estimatedStepExecutionTime="0.715">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.76" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="8b8acc9c-a151-4dd3-80bf-a816fde90c6b" action="command" session="router1" normalOffset="399.601" estimatedStepExecutionTime="4.719">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.014" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="c10139e6-9d4e-4df6-b35d-bd78c51b93a6" action="command" session="router1" normalOffset="8.58" estimatedStepExecutionTime="0.715">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.185" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="c84761cb-454e-42b4-8a96-ed93f2ee14af" action="command" session="router1" normalOffset="104.859" estimatedStepExecutionTime="0.715">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.657" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="cb23e9bf-7129-454c-a4b8-78813206bc40" action="command" session="router1" normalOffset="20.895" estimatedStepExecutionTime="0.694">
+                    <command>
+                        <body>show rsvp interface BE98</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="2.071" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="9ccc2310-11bc-4a1a-92c1-be732b40f72b" action="command" session="router1" normalOffset="22.054" estimatedStepExecutionTime="4.571">
+                    <command>
+                        <body>show interfaces tunnel-te google_D9-google_D6-HIPRI-05001</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.017" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="e2c388a1-48b8-4f88-8496-80df3b5ba765" action="command" session="router1" normalOffset="7.222" estimatedStepExecutionTime="0.407">
+                    <command>
+                        <body>show interfaces tunnel-te google_D9-google_D6-HIPRI-05002</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.304" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="0fde5c47-b2c3-48d4-a439-cb0534b80846" action="command" session="router1" normalOffset="5.929" estimatedStepExecutionTime="0.406">
+                    <command>
+                        <body>show interfaces tunnel-te google_D9-google_D6-HIPRI-05031</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.296" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="81e35587-a072-4a34-a655-e738abfa3f32" action="command" session="router1" normalOffset="6.908" estimatedStepExecutionTime="0.41">
+                    <command>
+                        <body>show interfaces tunnel-te google_D9-google_D6-HIPRI-05032</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.204" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="0ca9ba94-7179-4ec6-81b3-44a8d7c642ab" action="open" session="router2" normalOffset="18.116">
+                    <command>
+                        <body>device:router2#ssh</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.OpenStepPropertyGroup">
+                        <stepProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                            <completionProperties expectedIdleTime="0.182" expectedIdleTime.inherit="false"/>
+                        </stepProperties>
+                        <sessionProperties type="com.fnfr.svt.applications.ssh.documents.SSHProperties"/>
+                        <sessionClass type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    </applicationProperties>
+                </item>
+                <item guid="3cce2d88-ae1e-4cbb-947d-bede3daea7b1" action="set_terminal_width" session="router2" normalOffset="0.5" estimatedStepExecutionTime="0.635">
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="f83c6e9b-d799-456d-ab74-6958a10d4018" action="command" session="router2" normalOffset="5.758" estimatedStepExecutionTime="0.443">
+                    <command>
+                        <body>show rsvp interface BE15</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.359" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="b00e85b7-ea71-403a-b773-e3a8aec4d2da" action="command" session="router1" normalOffset="30.049" estimatedStepExecutionTime="0.714">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.707" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="048b024f-4184-4ef3-895e-73a0018726e3" action="command" session="router1" normalOffset="178.767" estimatedStepExecutionTime="4.722">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.014" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="8c6db97b-4031-466e-b702-81a8d495137d" action="command" session="router1" normalOffset="8.702" estimatedStepExecutionTime="0.714">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.314" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="c436f317-582a-48f8-9abb-7b448be57112" action="command" session="router1" normalOffset="34.909" estimatedStepExecutionTime="0.716">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.631" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="fc88fd1c-7609-44e6-8739-adcd7336bc01" action="command" session="router1" normalOffset="6.876" estimatedStepExecutionTime="0.713">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="3.755" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="c6838c7f-a13b-4ffc-9a5f-9eda4ba8869d" action="command" session="router1" normalOffset="7.271" estimatedStepExecutionTime="0.713">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.361" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="1b8ac039-be58-452d-8e45-1fd490379f0d" action="command" session="router1" normalOffset="15.901" estimatedStepExecutionTime="0.718">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.316" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="57f601b6-4220-42bc-b454-bd7d6006b0c9" action="command" session="router1" normalOffset="4.485" estimatedStepExecutionTime="0.732">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.722" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="f613f9b1-2178-4322-a1af-adef3210a7ab" action="command" session="router1" normalOffset="4.95" estimatedStepExecutionTime="0.718">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.616" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="553a3ef5-d8af-4435-aa86-469a9c15c500" action="command" session="router1" normalOffset="12.324" estimatedStepExecutionTime="0.715">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.417" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="a7f44f2a-9aa6-47c2-9e37-1873ed6334d8" action="command" session="router1" normalOffset="3.782" estimatedStepExecutionTime="0.715">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.805" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="790031aa-ae45-4968-b9e6-3a05c118749e" action="command" session="router1" normalOffset="37.533" estimatedStepExecutionTime="0.209">
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.207" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="928e9363-88ab-4492-a83b-3d2943c02fe0" action="command" session="router1" normalOffset="5.868" estimatedStepExecutionTime="0.699">
+                    <command>
+                        <body>show rsvp interface BE98</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="0.301" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="d0fe4155-1991-46ba-a7f1-f2ec92142573" action="command" session="router1" normalOffset="2961.619" estimatedStepExecutionTime="4.699">
+                    <command>
+                        <body>show rsvp interface BE98</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="4.017" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="8d0804e9-65a8-4f8d-92d9-b055a51e5b69" action="command" session="router1" normalOffset="8.585" estimatedStepExecutionTime="0.723">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw signame</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.897" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="9fa55182-6a2c-470f-994c-1e6ae5a80484" action="command" session="router1" normalOffset="15.371" estimatedStepExecutionTime="0.718">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="3.059" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="7a7385cf-699a-4e06-92a5-a64f8fd66f18" action="command" session="router1" normalOffset="178.259" estimatedStepExecutionTime="10.991">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="7.641" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="bbbc498a-66c5-4514-87b9-47ab9152390b" action="command" session="router1" normalOffset="68.153" estimatedStepExecutionTime="0.724">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="3.219" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+                <item guid="69599ab9-8772-4f30-9bd0-fee24e8ef214" action="command" session="router1" normalOffset="11.889" estimatedStepExecutionTime="0.728">
+                    <command>
+                        <body>show mpls traffic-eng tunnels name google_D9-google_D6-HIPRI-05001 auto-bw brie</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties">
+                        <completionProperties expectedIdleTime="1.484" expectedIdleTime.inherit="false"/>
+                    </applicationProperties>
+                </item>
+            </steps>
+        </item>
+    </procedures>
+</testCase>

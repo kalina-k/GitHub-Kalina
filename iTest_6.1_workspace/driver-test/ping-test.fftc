@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<testCase version="6.1.0.863d7a9">
+    <procedures>
+        <item name="main">
+            <steps>
+                <item guid="6f839c12-eee3-4847-a8c7-c8460d123223" action="return">
+                    <command>
+                        <body>{&quot;properties&quot;:{}}</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                </item>
+            </steps>
+        </item>
+    </procedures>
+</testCase>

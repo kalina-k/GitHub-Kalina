@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<testCase version="6.1.0.863d7a9">
+    <procedures>
+        <item name="main">
+            <steps>
+                <item guid="29b28f87-ec94-4a7a-af32-8d2725b8c57d" action="eval">
+                    <command>
+                        <body>set numberInputPorts 384</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="316fe1f7-daf4-40d4-964a-50b26fe8721a" action="eval">
+                    <command>
+                        <body>set portType Optical</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="78cac21a-d285-4e0d-aa8b-60edf60b2b51" action="eval">
+                    <command>
+                        <body>set properties &quot;{\\&quot;Port Type\\&quot;:\\&quot;$portType\\&quot;}&quot;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="fc699195-f83d-4984-8949-29ccdaa52dd4" action="eval" skip="true">
+                    <command>
+                        <body>set portStatuses &quot;1OPEN 2CLOSED 3OPEN 4CLOSED 5OPEN 6OPEN 7OPEN 8OPEN 9OPEN 10OPEN 11OPEN 12OPEN 13OPEN 14OPEN 15OPEN 16OPEN 17OPEN 18OPEN 19OPEN 20OPEN 21OPEN 22OPEN 23OPEN 24OPEN 25OPEN 26OPEN 27OPEN 28OPEN 29OPEN 30OPEN 31OPEN 32OPEN 33OPEN 34OPEN 35OPEN 36OPEN 37OPEN 38OPEN 39OPEN 40OPEN 41OPEN 42OPEN 43OPEN 44OPEN 45OPEN 46OPEN 47OPEN 48OPEN 49OPEN 50OPEN 51OPEN 52OPEN 53OPEN 54OPEN 55OPEN 56OPEN 57OPEN 58OPEN 59OPEN 60OPEN 61OPEN 62OPEN 63OPEN 64OPEN 65OPEN 66OPEN 67OPEN 68OPEN 69OPEN 70OPEN 71OPEN 72OPEN 73OPEN 74OPEN 75OPEN 76OPEN 77OPEN 78OPEN 79OPEN 80OPEN 81OPEN 82OPEN 83OPEN 84OPEN 85OPEN 86OPEN 87OPEN 88OPEN 89OPEN 90OPEN 91OPEN 92OPEN 93OPEN 94OPEN 95OPEN 96OPEN 97OPEN 98OPEN 99OPEN 100OPEN 101OPEN 102OPEN 103OPEN 104OPEN 105OPEN 106OPEN 107OPEN 108OPEN 109OPEN 110OPEN 111OPEN 112OPEN 113OPEN 114OPEN 115OPEN 116OPEN 117OPEN 118OPEN 119OPEN 120OPEN 121OPEN 122OPEN 123OPEN 124OPEN 125OPEN 126OPEN 127OPEN 128OPEN 129OPEN 130OPEN 131OPEN 132OPEN 133OPEN 134OPEN 135OPEN 136OPEN 137OPEN 138OPEN 139OPEN 140OPEN 141OPEN 142OPEN 143OPEN 144OPEN 145OPEN 146OPEN 147OPEN 148OPEN 149OPEN 150OPEN 151OPEN 152OPEN 153OPEN 154OPEN 155OPEN 156OPEN 157OPEN 158OPEN 159OPEN 160OPEN 161OPEN 162OPEN 163OPEN 164OPEN 165OPEN 166OPEN 167OPEN 168OPEN 169OPEN 170OPEN 171OPEN 172OPEN 173OPEN 174OPEN 175OPEN 176OPEN 177OPEN 178OPEN 179OPEN 180OPEN 181OPEN 182OPEN 183OPEN 184OPEN 185OPEN 186OPEN 187OPEN 188OPEN 189OPEN 190OPEN 191OPEN 192OPEN 193OPEN 194OPEN 195OPEN 196OPEN 197OPEN 198OPEN 199OPEN 200OPEN 201OPEN 202OPEN 203OPEN 204OPEN 205OPEN 206OPEN 207OPEN 208OPEN 209OPEN 210OPEN 211OPEN 212OPEN 213OPEN 214OPEN 215OPEN 216OPEN 217OPEN 218OPEN 219OPEN 220OPEN 221OPEN 222OPEN 223OPEN 224OPEN 225OPEN 226OPEN 227OPEN 228OPEN 229OPEN 230OPEN 231OPEN 232OPEN 233OPEN 234OPEN 235OPEN 236OPEN 237OPEN 238OPEN 239OPEN 240OPEN 241OPEN 242OPEN 243OPEN 244OPEN 245OPEN 246OPEN 247OPEN 248OPEN 249OPEN 250OPEN 251OPEN 252OPEN 253OPEN 254OPEN 255OPEN 256OPEN 257OPEN 258OPEN 259OPEN 260OPEN 261OPEN 262OPEN 263OPEN 264OPEN 265OPEN 266OPEN 267OPEN 268OPEN 269OPEN 270OPEN 271OPEN 272OPEN 273OPEN 274OPEN 275OPEN 276OPEN 277OPEN 278OPEN 279OPEN 280OPEN 281OPEN 282OPEN 283OPEN 284OPEN 285OPEN 286OPEN 287OPEN 288OPEN 289OPEN 290OPEN 291OPEN 292OPEN 293OPEN 294OPEN 295OPEN 296OPEN 297OPEN 298OPEN 299OPEN 300OPEN 301OPEN 302OPEN 303OPEN 304OPEN 305OPEN 306OPEN 307OPEN 308OPEN 309OPEN 310OPEN 311OPEN 312OPEN 313OPEN 314OPEN 315OPEN 316OPEN 317OPEN 318OPEN 319OPEN 320OPEN 321OPEN 322OPEN 323OPEN 324OPEN 325OPEN 326OPEN 327OPEN 328OPEN 329OPEN 330OPEN 331OPEN 332OPEN 333OPEN 334OPEN 335OPEN 336OPEN 337OPEN 338OPEN 339OPEN 340OPEN 341OPEN 342OPEN 343OPEN 344OPEN 345OPEN 346OPEN 347OPEN 348OPEN 349OPEN 350OPEN 351OPEN 352OPEN 353OPEN 354OPEN 355OPEN 356OPEN 357OPEN 358OPEN 359OPEN 360OPEN 361OPEN 362OPEN 363OPEN 364OPEN 365OPEN 366OPEN 367OPEN 368OPEN 369OPEN 370OPEN 371OPEN 372OPEN 373OPEN 374OPEN 375OPEN 376OPEN 377OPEN 378OPEN 379OPEN 380OPEN 381OPEN 382OPEN 383OPEN 384OPEN 385OPEN 386OPEN 387OPEN 388OPEN 389OPEN 390OPEN 391OPEN 392OPEN 393OPEN 394OPEN 395OPEN 396OPEN 397OPEN 398OPEN 399OPEN 400OPEN 401OPEN 402OPEN 403OPEN 404OPEN 405OPEN 406OPEN 407OPEN 408OPEN 409OPEN 410OPEN 411OPEN 412OPEN 413OPEN 414OPEN 415OPEN 416OPEN 417OPEN 418OPEN 419OPEN 420OPEN 421OPEN 422OPEN 423OPEN 424OPEN 425OPEN 426OPEN 427OPEN 428OPEN 429OPEN 430OPEN 431OPEN 432OPEN 433OPEN 434OPEN 435OPEN 436OPEN 437OPEN 438OPEN 439OPEN 440OPEN 441OPEN 442OPEN 443OPEN 444OPEN 445OPEN 446OPEN 447OPEN 448OPEN 449OPEN 450OPEN 451OPEN 452OPEN 453OPEN 454OPEN 455OPEN 456OPEN 457OPEN 458OPEN 459OPEN 460OPEN 461OPEN 462OPEN 463OPEN 464OPEN 465OPEN 466OPEN 467OPEN 468OPEN 469OPEN 470OPEN 471OPEN 472OPEN 473OPEN 474OPEN 475OPEN 476OPEN 477OPEN 478OPEN 479OPEN 480OPEN 481OPEN 482OPEN 483OPEN 484OPEN 485OPEN 486OPEN 487OPEN 488OPEN 489OPEN 490OPEN 491OPEN 492OPEN 493OPEN 494OPEN 495OPEN 496OPEN 497OPEN 498OPEN 499OPEN 500OPEN 501OPEN 502OPEN 503OPEN 504OPEN 505OPEN 506OPEN 507OPEN 508OPEN 509OPEN 510OPEN 511OPEN 512OPEN 513OPEN 514OPEN 515OPEN 516OPEN 517OPEN 518OPEN 519OPEN 520OPEN 521OPEN 522OPEN 523OPEN 524OPEN 525OPEN 526OPEN 527OPEN 528OPEN 529OPEN 530OPEN 531OPEN 532OPEN 533OPEN 534OPEN 535OPEN 536OPEN 537OPEN 538OPEN 539OPEN 540OPEN 541OPEN 542OPEN 543OPEN 544OPEN 545OPEN 546OPEN 547OPEN 548OPEN 549OPEN 550OPEN 551OPEN 552OPEN 553OPEN 554OPEN 555OPEN 556OPEN 557OPEN 558OPEN 559OPEN 560OPEN 561OPEN 562OPEN 563OPEN 564OPEN 565OPEN 566OPEN 567OPEN 568OPEN 569OPEN 570OPEN 571OPEN 572OPEN 573OPEN 574OPEN 575OPEN 576OPEN 577OPEN 578OPEN 579OPEN 580OPEN 581OPEN 582OPEN 583OPEN 584OPEN 585OPEN 586OPEN 587OPEN 588OPEN 589OPEN 590OPEN 591OPEN 592OPEN 593OPEN 594OPEN 595OPEN 596OPEN 597OPEN 598OPEN 599OPEN 600OPEN 601OPEN 602OPEN 603OPEN 604OPEN 605OPEN 606OPEN 607OPEN 608OPEN 609OPEN 610OPEN 611OPEN 612OPEN 613OPEN 614OPEN 615OPEN 616OPEN 617OPEN 618OPEN 619OPEN 620OPEN 621OPEN 622OPEN 623OPEN 624OPEN 625OPEN 626OPEN 627OPEN 628OPEN 629OPEN 630OPEN 631OPEN 632OPEN 633OPEN 634OPEN 635OPEN 636OPEN 637OPEN 638OPEN 639OPEN 640OPEN 641OPEN 642OPEN 643OPEN 644OPEN 645OPEN 646OPEN 647OPEN 648OPEN 649OPEN 650OPEN 651OPEN 652OPEN 653OPEN 654OPEN 655OPEN 656OPEN 657OPEN 658OPEN 659OPEN 660OPEN 661OPEN 662OPEN 663OPEN 664OPEN 665OPEN 666OPEN 667OPEN 668OPEN 669OPEN 670OPEN 671OPEN 672OPEN 673OPEN 674OPEN 675OPEN 676OPEN 677OPEN 678OPEN 679OPEN 680OPEN 681OPEN 682OPEN 683OPEN 684OPEN 685OPEN 686OPEN 687OPEN 688OPEN 689OPEN 690OPEN 691OPEN 692OPEN 693OPEN 694OPEN 695OPEN 696OPEN 697OPEN 698OPEN 699OPEN 700OPEN 701OPEN 702OPEN 703OPEN 704OPEN 705OPEN 706OPEN 707OPEN 708OPEN 709OPEN 710OPEN 711OPEN 712OPEN 713OPEN 714OPEN 715OPEN 716OPEN 717OPEN 718OPEN 719OPEN 720OPEN 721OPEN 722OPEN 723OPEN 724OPEN 725OPEN 726OPEN 727OPEN 728OPEN 729OPEN 730OPEN 731OPEN 732OPEN 733OPEN 734OPEN 735OPEN 736OPEN 737OPEN 738OPEN 739OPEN 740OPEN 741OPEN 742OPEN 743OPEN 744OPEN 745OPEN 746OPEN 747OPEN 748OPEN 749OPEN 750OPEN 751OPEN 752OPEN 753OPEN 754OPEN 755OPEN 756OPEN 60OPEN 761OPEN 762OPEN 763OPEN 764OPEN 765OPEN 766OPEN 767OPEN 768OPEN&quot;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="86213237-23d0-43a4-909c-602901f489cf" action="eval">
+                    <command>
+                        <body>set portStatuses &quot;1OPEN 2OPEN 3CLOSED 4OPEN&quot;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="6927b728-2744-4612-b0a7-3cd528e9d949" action="eval">
+                    <command>
+                        <body>set properties &quot;{\\&quot;Port Type\\&quot;:\\&quot;$portType\\&quot;}&quot;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="1b9ae3d2-cd10-47f5-af7d-b258f5d65c68" action="eval">
+                    <command>
+                        <body>set portDirection Input</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="f0efbc24-6423-46f0-937f-ce10e4d097a4" action="eval">
+                    <command>
+                        <body>set portsJson [join $portStatuses ,]</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="be32b791-38a2-4569-aedc-f6a566475681" action="eval">
+                    <command>
+                        <body>set portsJson [regsub -all &quot;(\\\\d+)&quot; &quot;$portsJson&quot; &quot;{\\&quot;name\\&quot;:\\&quot;\\\\0\\&quot;,&quot;]</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="e854998c-5264-4336-b71a-efdf5466c465" action="eval">
+                    <command>
+                        <body>set status online</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="8d693ef7-2b88-4bc7-9e55-57f73386d4a1" action="eval">
+                    <command>
+                        <body>set portsJson [regsub -all &quot;OPEN&quot; &quot;$portsJson&quot; &quot;\\&quot;status\\&quot;:\\&quot;$status\\&quot;,\\&quot;container\\&quot;:\\&quot;$portDirection\\&quot;,\\&quot;properties\\&quot;:$properties}&quot;]</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="746afdec-2209-4992-895d-5c69552de396" action="eval">
+                    <command>
+                        <body>set status offline</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="cbf0a31e-fe3e-4c77-9c32-b0aff0cc0993" action="eval">
+                    <command>
+                        <body>set portsJson [regsub -all &quot;CLOSED&quot; &quot;$portsJson&quot; &quot;\\&quot;status\\&quot;:\\&quot;$status\\&quot;,\\&quot;container\\&quot;:\\&quot;$portDirection\\&quot;,\\&quot;properties\\&quot;:$properties}&quot;]</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="b76a7da8-777e-4191-8375-2e8001a7d3e7" action="eval">
+                    <command>
+                        <body>set lastInputPortIndex [string first $numberInputPorts $portsJson]</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="c94fbda8-7175-484c-b487-b5a2389cb950" action="if">
+                    <command>
+                        <body>$lastInputPortIndex &gt;= 0</body>
+                    </command>
+                    <nestedSteps>
+                        <item guid="fd18a237-68e5-40a0-b2ba-04eed01f0a96" action="then">
+                            <nestedSteps>
+                                <item guid="a6380af5-30ab-42d2-99d4-8068a2b90301" action="eval">
+                                    <command>
+                                        <body>set portsJsonLen [string length $portsJson]</body>
+                                    </command>
+                                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                    <useFieldsInCommand>false</useFieldsInCommand>
+                                </item>
+                                <item guid="ef7a8984-fa95-43f9-a8b8-81fb781304b4" action="eval">
+                                    <command>
+                                        <body>set firstOutputPortIndexDelta [string first &quot;{\\&quot;name&quot; [string range $portsJson $lastInputPortIndex $portsJsonLen]]</body>
+                                    </command>
+                                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                    <useFieldsInCommand>false</useFieldsInCommand>
+                                </item>
+                                <item guid="8a43c96f-d3ec-4cab-83f5-adfb2f766a1a" action="eval">
+                                    <command>
+                                        <body>set firstOutputPortIndex [expr $lastInputPortIndex + $firstOutputPortIndexDelta]</body>
+                                    </command>
+                                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                    <useFieldsInCommand>false</useFieldsInCommand>
+                                </item>
+                                <item guid="1e1dda9b-a931-4842-94f5-c2a1de32ef9a" action="eval">
+                                    <command>
+                                        <body>set portsJsonOutput [regsub -all &quot;Input&quot; [string range &quot;$portsJson&quot; $firstOutputPortIndex $portsJsonLen] &quot;Output&quot;]</body>
+                                    </command>
+                                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                    <useFieldsInCommand>false</useFieldsInCommand>
+                                </item>
+                                <item guid="f051e9e6-018e-40e5-9d1a-39398f061a95" action="eval">
+                                    <command>
+                                        <body>set portsJsonInput [string range $portsJson 0 [expr $firstOutputPortIndex - 1]]</body>
+                                    </command>
+                                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                    <useFieldsInCommand>false</useFieldsInCommand>
+                                </item>
+                                <item guid="19c5d6b4-88d4-4320-a30d-45981f0a31ab" action="eval">
+                                    <command>
+                                        <body>set portsJson &quot;$portsJsonInput$portsJsonOutput&quot;</body>
+                                    </command>
+                                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                                    <useFieldsInCommand>false</useFieldsInCommand>
+                                </item>
+                            </nestedSteps>
+                            <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                            <useFieldsInCommand>false</useFieldsInCommand>
+                        </item>
+                    </nestedSteps>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="91b8126c-c370-4e8e-97d0-f766ac9e4f9b" action="eval">
+                    <command>
+                        <body>set ret &quot;\\&quot;ports\\&quot;:\\[$portsJson\\]&quot;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+            </steps>
+        </item>
+    </procedures>
+</testCase>

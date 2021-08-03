@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<testCase version="6.1.0.863d7a9">
+    <procedures>
+        <item name="main">
+            <steps>
+                <item guid="970305cb-6fcf-4c6c-ab0d-aa5c6642f9f7" action="eval">
+                    <command>
+                        <body>puts &quot;x:5 y:7 z:10&quot;</body>
+                    </command>
+                    <postProcessing>
+                        <storeResponseAt>response1</storeResponseAt>
+                    </postProcessing>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="7e7f08dc-8113-4439-84e0-09f6af3921f6" action="eval">
+                    <command>
+                        <body>puts $response1</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="c23ee804-ae45-4124-a813-03d5f13c979c" action="eval">
+                    <command>
+                        <body>response response1</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="8b605ec6-c874-4c38-959a-5a7d18fd0244" action="eval">
+                    <command>
+                        <body>puts &quot;x = 5 y = 7 z = 10\\nx = 6 y = 8 z = 11&quot;</body>
+                    </command>
+                    <postProcessing>
+                        <storeResponseAt>response2</storeResponseAt>
+                    </postProcessing>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="21b6e3a3-8965-416f-8ea9-84d6582ba0bf" action="eval">
+                    <command>
+                        <body>puts $response2</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+            </steps>
+        </item>
+    </procedures>
+</testCase>

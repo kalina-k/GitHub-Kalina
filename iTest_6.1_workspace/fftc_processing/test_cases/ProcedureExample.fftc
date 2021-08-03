@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<testCase version="5.1.0.77511">
+    <general>
+        <rendering tclNamespace="velocity" testCaseId="Procedures789" testCaseName="Sample Procedures"/>
+        <documentation>Sample Procedure Library</documentation>
+        <notes>Some sample procedures for a library.</notes>
+        <owner>I. M. Developer</owner>
+        <isProcedureLibrary>true</isProcedureLibrary>
+    </general>
+    <procedures>
+        <item name="main">
+            <steps>
+                <item guid="3515274e-e5e5-43d8-a8cc-25d135087242" action="comment">
+                    <command>
+                        <body>Test sample procedures</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="ced0f6dd-5b95-44e0-9452-907123e00063" action="call">
+                    <command>
+                        <body>sampleProc1 -arg1 value1 -arg2 value2</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="213d5b5e-d463-4600-b640-5b3d619cfbed" action="call">
+                    <command>
+                        <body>sampleProc2 -arg2 value2</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="8a511a36-a55d-4993-8a1d-6d8b58286043" action="call">
+                    <command>
+                        <body>sampleProc3 -arg1 value1</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="b5f46417-a058-46f4-9145-3890bf4e1074" action="call">
+                    <command>
+                        <body>sampleProc4 -arg1 value1 -arg2 value2 -arg3 value3 -arg4 value4</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+            </steps>
+        </item>
+        <item name="sampleProc1" isPublic="true" defaultSessionProfile="application:com.fnfr.svt.applications.tclsh">
+            <description>Sample Procedure 1</description>
+            <steps>
+                <item guid="a3c61265-b765-4f35-829e-76d649e4e00e" action="eval">
+                    <command>
+                        <body>puts {sampleProc1 arg1: $arg1, arg2: $arg2}</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="f5e73215-061b-4753-ab9e-12451022b97b" action="return">
+                    <command>
+                        <body>sampleProc1 arg1: $arg1, arg2: $arg2</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                </item>
+            </steps>
+            <author>Aurthur One</author>
+            <version>1.0</version>
+            <multilineDescription>Sample procedure 1 which is publicly listed as callable.</multilineDescription>
+            <arguments>
+                <item name="arg1">
+                    <description>arg1 Description</description>
+                    <defaultValue>arg1 default</defaultValue>
+                </item>
+                <item name="arg2">
+                    <description>arg2 Description</description>
+                    <defaultValue>arg2 default</defaultValue>
+                </item>
+            </arguments>
+        </item>
+        <item name="sampleProc2" isPublic="true">
+            <description>Sample Procedure 2</description>
+            <steps>
+                <item guid="79ce767b-d7fa-4738-8316-f4b0334100d7" action="eval">
+                    <command>
+                        <body>puts {sampleProc2 arg1: $arg1, arg2: $arg2}</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="34136cf0-f2dd-401d-8e11-8f0eb6fded28" action="return">
+                    <command>
+                        <body>sampleProc2 arg1: $arg1, arg2: $arg2</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                </item>
+            </steps>
+            <author>Aurthur Two</author>
+            <version>2.0</version>
+            <multilineDescription>Sample procedure 2 which is publicly listed as callable.</multilineDescription>
+            <arguments>
+                <item name="arg1">
+                    <description>arg1 Description</description>
+                    <isMandatory>true</isMandatory>
+                </item>
+                <item name="arg2">
+                    <description>arg2 Description</description>
+                    <isMandatory>true</isMandatory>
+                </item>
+            </arguments>
+        </item>
+        <item name="sampleProc3">
+            <description>Sample Procedure 3</description>
+            <steps>
+                <item guid="f02627e9-7a76-47b4-8596-db7049a5dcbe" action="eval">
+                    <command>
+                        <body>puts {sampleProc3 arg1: $arg1, arg2: $arg2}</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="09b9c180-e8d9-4071-a027-9de800c004ef" action="return">
+                    <command>
+                        <body>sampleProc3 arg1: $arg1, arg2: $arg2</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                </item>
+            </steps>
+            <author>Aurthur Three</author>
+            <version>3.0</version>
+            <multilineDescription>Sample procedure 3 which is not publicly listed as callable.</multilineDescription>
+            <arguments>
+                <item name="arg1">
+                    <defaultValue>arg1 default</defaultValue>
+                </item>
+                <item name="arg2">
+                    <defaultValue>arg2 default</defaultValue>
+                </item>
+            </arguments>
+        </item>
+        <item name="sampleProc4" isPublic="true">
+            <description>Sample Procedure 4</description>
+            <steps>
+                <item guid="0d299570-0753-4814-a6e0-7021557baf9a" action="eval">
+                    <command>
+                        <body>puts {sampleProc4 arg1: $arg1, arg2: $arg2, arg3: $arg3, arg4: $arg4}</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="915b6369-8585-4b12-8478-a7a8bded4d81" action="return">
+                    <command>
+                        <body>sampleProc4 arg1: $arg1, arg2: $arg2, arg3: $arg3, arg4: $arg4</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                </item>
+            </steps>
+            <author>Aurthur Four</author>
+            <version>4.0</version>
+            <multilineDescription>Sample procedure 4 which is publicly listed as callable.</multilineDescription>
+            <arguments>
+                <item name="arg1">
+                    <description>arg1 Description</description>
+                    <defaultValue>arg1 default</defaultValue>
+                </item>
+                <item name="arg2">
+                    <description>arg2 Description</description>
+                    <defaultValue>arg2 default</defaultValue>
+                </item>
+                <item name="arg3">
+                    <description>arg3 Description</description>
+                    <defaultValue>arg3 default</defaultValue>
+                </item>
+                <item name="arg4">
+                    <description>arg4 Description</description>
+                    <defaultValue>arg4 default</defaultValue>
+                </item>
+            </arguments>
+        </item>
+    </procedures>
+</testCase>

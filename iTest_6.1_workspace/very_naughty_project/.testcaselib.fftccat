@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<TestCaseCatalog version="6.1.0.863d7a9">
+    <testCaseCatalog>
+        <item name="ProcedureExample.fftc">
+            <tcDescriptor version="6.1.0.863d7a9">
+                <general>
+                    <rendering tclNamespace="velocity" testCaseId="Procedures789" testCaseName="Sample Procedures"/>
+                    <documentation>Sample Procedure Library</documentation>
+                    <notes>Some sample procedures for a library.</notes>
+                    <owner>I. M. Developer</owner>
+                    <isProcedureLibrary>true</isProcedureLibrary>
+                </general>
+                <procedures>
+                    <item name="sampleProc1" isPublic="true" defaultSessionProfile="application:com.fnfr.svt.applications.tclsh">
+                        <description>Sample Procedure 1</description>
+                        <author>Aurthur One</author>
+                        <version>1.0</version>
+                        <multilineDescription>Sample procedure 1 which is publicly listed as callable.</multilineDescription>
+                        <arguments>
+                            <item name="arg1">
+                                <description>arg1 Description</description>
+                                <defaultValue>arg1 default</defaultValue>
+                            </item>
+                            <item name="arg2">
+                                <description>arg2 Description</description>
+                                <defaultValue>arg2 default</defaultValue>
+                            </item>
+                        </arguments>
+                    </item>
+                    <item name="sampleProc2" isPublic="true">
+                        <description>Sample Procedure 2</description>
+                        <author>Aurthur Two</author>
+                        <version>2.0</version>
+                        <multilineDescription>Sample procedure 2 which is publicly listed as callable.</multilineDescription>
+                        <arguments>
+                            <item name="arg1">
+                                <description>arg1 Description</description>
+                                <isMandatory>true</isMandatory>
+                            </item>
+                            <item name="arg2">
+                                <description>arg2 Description</description>
+                                <isMandatory>true</isMandatory>
+                            </item>
+                        </arguments>
+                    </item>
+                    <item name="sampleProc4" isPublic="true">
+                        <description>Sample Procedure 4</description>
+                        <author>Aurthur Four</author>
+                        <version>4.0</version>
+                        <multilineDescription>Sample procedure 4 which is publicly listed as callable.</multilineDescription>
+                        <arguments>
+                            <item name="arg1">
+                                <description>arg1 Description</description>
+                                <defaultValue>arg1 default</defaultValue>
+                            </item>
+                            <item name="arg2">
+                                <description>arg2 Description</description>
+                                <defaultValue>arg2 default</defaultValue>
+                            </item>
+                            <item name="arg3">
+                                <description>arg3 Description</description>
+                                <defaultValue>arg3 default</defaultValue>
+                            </item>
+                            <item name="arg4">
+                                <description>arg4 Description</description>
+                                <defaultValue>arg4 default</defaultValue>
+                            </item>
+                        </arguments>
+                    </item>
+                </procedures>
+            </tcDescriptor>
+        </item>
+        <item name="QcSample.fftc">
+            <tcDescriptor version="6.1.0.863d7a9">
+                <general>
+                    <rendering tclNamespace="velocity" testCaseId="QuickCall456" testCaseName="Sample QuickCalls"/>
+                    <documentation>QuickCall Example</documentation>
+                    <notes>An example QuickCall (TM) library.</notes>
+                    <owner>I. M. Developer</owner>
+                    <sessionClass includeTestCase="true" sessionType="project://fftc_processing/session_profiles/SshQc.ffsp"/>
+                </general>
+                <procedures>
+                    <item name="list_tools" isPublic="true" defaultSessionProfile="project://fftc_processing/session_profiles/Ssh.ffsp">
+                        <description>List Data Tools</description>
+                        <author>emiller</author>
+                        <version>1.0</version>
+                        <multilineDescription>A procedure for listing tools in /data/tools.</multilineDescription>
+                        <arguments>
+                            <item name="arg1">
+                                <description>arg1 Description</description>
+                                <defaultValue>arg1 default</defaultValue>
+                            </item>
+                            <item name="arg2">
+                                <description>arg2 Description</description>
+                                <defaultValue>arg2 default</defaultValue>
+                            </item>
+                        </arguments>
+                        <response>{&quot;name&quot;:&quot;Cisco&quot;,&quot;ip&quot;:&quot;1.0.0.1&quot;}</response>
+                    </item>
+                    <item name="list_logs" isPublic="true" defaultSessionProfile="project://fftc_processing/session_profiles/Ssh.ffsp">
+                        <description>List Data Logs</description>
+                        <author>emiller</author>
+                        <version>2.0</version>
+                        <multilineDescription>A procedure for listing logs in /data/logs.</multilineDescription>
+                        <arguments>
+                            <item name="arg1">
+                                <description>arg1 Description</description>
+                                <defaultValue>arg1 default</defaultValue>
+                            </item>
+                            <item name="arg2">
+                                <description>arg2 Description</description>
+                                <defaultValue>arg2 default</defaultValue>
+                            </item>
+                        </arguments>
+                        <response>{&quot;array&quot;:[1,2,3],&quot;boolean&quot;:true,&quot;new&quot;:&quot;notNull&quot;,&quot;number&quot;:123,&quot;object&quot;:{&quot;a&quot;:&quot;b&quot;,&quot;c&quot;:&quot;d&quot;,&quot;e&quot;:&quot;f&quot;},&quot;string&quot;:&quot;Hello World&quot;}
+
+{
+  &quot;array&quot;:[
+    1,
+    2,
+    3
+  ],
+  &quot;boolean&quot;:true,
+  &quot;new&quot;:&quot;notNull&quot;,
+  &quot;number&quot;:123,
+  &quot;object&quot;:{
+    &quot;a&quot;:&quot;b&quot;,
+    &quot;c&quot;:&quot;d&quot;,
+    &quot;e&quot;:&quot;f&quot;
+  },
+  &quot;string&quot;:&quot;Hello World&quot;
+}</response>
+                    </item>
+                </procedures>
+            </tcDescriptor>
+        </item>
+    </testCaseCatalog>
+</TestCaseCatalog>

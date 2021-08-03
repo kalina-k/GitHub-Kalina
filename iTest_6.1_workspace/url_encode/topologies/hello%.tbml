@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tbml xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.teslaalliance.org/trs/tbml/1.0/tbml-core.xsd" xmlns="http://www.teslaalliance.org/trs/tbml/1.0">
+  <header>
+    <name>hello%</name>
+    <description></description>
+    <property name="author">emiller</property>
+    <property name="dateCreated">2017-06-12T11:47:59.941-07:00</property>
+    <property name="dateModified">2017-06-19T16:53:43.324-07:00</property>
+    <property name="creationTool" vendor="com.fnfr">com.fnfr.itest.topology.tbml.diagram</property>
+    <property name="creationToolVersion" vendor="com.fnfr">6.1.0.863d7a9</property>
+  </header>
+  <body>
+    <resources>
+      <resource guid="9f21ac70-15d2-455b-9e9d-571689555290" id="resource_0" type="pc">
+        <boundary height="100" width="100" x="161" y="117"/>
+        <property name="iconURI">project://url_encode/topologies/network%20management%20appliance.png</property>
+        <property name="name">pc1</property>
+        <property name="inventoryName"/>
+        <extensions type="com.fnfr.itest.session" xs:namespace="com.fnfr.itest.session">
+          <session baseSessionProfile="" name="Tcl" provider="com.fnfr">
+            <sessionProfile version="6.1.0.863d7a9">
+              <baseApplication>com.fnfr.svt.applications.tclsh</baseApplication>
+              <sessionProperties type="com.fnfr.svt.applications.tclsh.TclshSessionProperties"/>
+              <baseProfile>project://url_encode/session_profiles/hello%25.ffsp</baseProfile>
+              <standalone>false</standalone>
+            </sessionProfile>
+          </session>
+        </extensions>
+        <resource guid="100ebbc4-2159-4f9f-bb6c-516a25c9becf" id="resource_0_0" type="port">
+          <property name="name">port1</property>
+          <property name="inventoryName"/>
+        </resource>
+      </resource>
+      <resource guid="7034a86e-41ca-4c97-8ff7-4ce5609a4eff" id="resource_1" type="router">
+        <boundary height="100" width="100" x="521" y="117"/>
+        <property name="iconURI">project://url_encode/topologies/router_icon%25.png</property>
+        <property name="name">router1</property>
+        <property name="inventoryName"/>
+        <extensions type="com.fnfr.itest.session" xs:namespace="com.fnfr.itest.session">
+          <session baseSessionProfile="" name="tclsh" provider="com.fnfr">
+            <sessionProfile version="6.1.0.863d7a9">
+              <baseApplication>com.fnfr.svt.applications.tclsh</baseApplication>
+              <sessionProperties type="com.fnfr.svt.applications.tclsh.TclshSessionProperties"/>
+              <baseProfile>project://url_encode/session_profiles/hello%20.ffsp</baseProfile>
+              <standalone>false</standalone>
+            </sessionProfile>
+          </session>
+        </extensions>
+        <resource guid="082bc04e-cb35-4b84-aef6-20ae4a9f3cf5" id="resource_1_0" type="port">
+          <property name="name">port1</property>
+          <property name="inventoryName"/>
+        </resource>
+      </resource>
+    </resources>
+    <connectivity>
+      <link id="link_0">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet1</property>
+        <endpoint id="resource_0_0"/>
+        <endpoint id="resource_1_0"/>
+      </link>
+    </connectivity>
+  </body>
+  <illustration>
+    <layer/>
+  </illustration>
+</tbml>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<testCase version="5.1.0.77511">
+    <general>
+        <emulation enable="true" duration="true"/>
+    </general>
+    <procedures>
+        <item name="main">
+            <steps>
+                <item guid="57a18257-566b-4e07-8f2f-5f402606c368" action="eval">
+                    <command>
+                        <body>puts hi</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+            </steps>
+        </item>
+    </procedures>
+</testCase>

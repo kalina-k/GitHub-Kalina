@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourceDriver>
+    <manifestVersion>1.1</manifestVersion>     
+    <version>1.1.2</version>     
+    <vendor>Spirent</vendor>     
+    <language>itest</language>     
+    <interface>Layer 1 Switch</interface> 
+    <entryPoint>mrv-1.1.2.fftc</entryPoint>
+    <resourceProperties>     
+        <property>
+            <name>ipAddress</name>
+            <description>IP address of the remote device</description>
+        </property>        
+        <property>
+            <name>username</name>
+            <description>username to login via SSH</description>
+        </property>        
+        <property>
+            <name>password</name>
+            <description>password to login via SSH</description>
+        </property>        
+    </resourceProperties>
+</resourceDriver>

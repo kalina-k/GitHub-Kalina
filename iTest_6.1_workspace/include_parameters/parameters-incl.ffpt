@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ParameterTree version="6.0.0.18638fa">
+    <parameters escape="true">
+        <parameters xmlns:pt="http://www.fnfr.com/schemas/parameterTree">
+            <esxiHost>10.108.32.127-incl</esxiHost>
+            <esxiUser>root-incl</esxiUser>
+            <fromIncl>foobar</fromIncl>
+            <thisone>fromIncl</thisone>
+        </parameters>
+    </parameters>
+</ParameterTree>

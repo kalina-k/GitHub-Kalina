@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<ParameterTree version="5.2.0.95bb698">
+    <parameters escape="true">
+        <parameters xmlns:pt="http://www.fnfr.com/schemas/parameterTree">
+            <esxiHost>10.108.32.127</esxiHost>
+            <esxiUser>root</esxiUser>
+            <esxiPassword pt:mask="true">Ub+VdSXAJM9NnnYEQSr2hw==</esxiPassword>
+            <property_iloHost>10.108.36.11</property_iloHost>
+            <property_iloUser>cwhitty</property_iloUser>
+            <property_iloPassword pt:mask="true">SrqvrrOjrgE=</property_iloPassword>
+            <powerCliHost>10.108.36.15</powerCliHost>
+            <powerCliUser>spirent</powerCliUser>
+            <powerCliPassword pt:mask="true">Ub+VdSXAJM9NnnYEQSr2hw==</powerCliPassword>
+            <dhcpSrvrHost>10.108.36.1</dhcpSrvrHost>
+            <dhcpSrvrUser>spirent</dhcpSrvrUser>
+            <dhcpSrvrPassword pt:mask="true">Ub+VdSXAJM9NnnYEQSr2hw==</dhcpSrvrPassword>
+            <updateNightly>true</updateNightly>
+            <vel_nightlyName>shared-Velocity_5.3-1512120944</vel_nightlyName>
+            <vel_nightlyPath>https://jenkins-ito.spirenteng.com/jenkins/view/_BuildVM/job/vel_BuildVM--v5.3/lastSuccessfulBuild/artifact/velocity-appliance/obj/</vel_nightlyPath>
+            <ite_nightlyName>shared-ITE_5.3-1512120944</ite_nightlyName>
+            <ite_nightlyPath>https://jenkins-ito.spirenteng.com/jenkins/view/_BuildVM/job/ite_BuildVM--v5.3/lastSuccessfulBuild/artifact/ite-appliance/obj/</ite_nightlyPath>
+            <updateFC>false</updateFC>
+            <vel_FCName>shared-Velocity_5.2-1511211402</vel_FCName>
+            <vel_FCPath>https://jenkins-ito.spirenteng.com/jenkins/view/_BuildVM/job/vel_BuildVM--v5.2/lastSuccessfulBuild/artifact/velocity-appliance/obj/</vel_FCPath>
+            <ite_FCName>shared-ITE_5.2-1511211402</ite_FCName>
+            <ite_FCPath>https://jenkins-ito.spirenteng.com/jenkins/view/_BuildVM/job/ite_BuildVM--v5.2/lastSuccessfulBuild/artifact/ite-appliance/obj/</ite_FCPath>
+        </parameters>
+    </parameters>
+    <includeParameters>
+        <item>parameters-incl.ffpt</item>
+    </includeParameters>
+</ParameterTree>

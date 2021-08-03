@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tbml xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.teslaalliance.org/trs/tbml/1.0/tbml-core.xsd" xmlns="http://www.teslaalliance.org/trs/tbml/1.0">
+  <header>
+    <name></name>
+    <description></description>
+    <property name="author">emiller</property>
+    <property name="dateCreated">2012-07-30T11:39:59.384-07:00</property>
+    <property name="dateModified">2012-12-14T16:42:42.819-08:00</property>
+    <property name="creationTool" vendor="com.fnfr">com.fnfr.itest.topology.tbml.diagram</property>
+    <property name="creationToolVersion" vendor="com.fnfr">4.2.1.qualifier</property>
+  </header>
+  <body>
+    <resources>
+      <resource guid="9b168d97-18fc-4482-82aa-2c2893c04f61" id="resource_0" type="trafficgen">
+        <boundary height="62" width="72" x="348" y="456"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/Traffic-Generator_32.gif</property>
+        <property name="name">STC</property>
+        <property name="configFile" vendor="com.spirent">project://MRQ50207_project/configuration/BgpMax.xml</property>
+        <extensions type="com.fnfr.itest.session" xs:namespace="com.fnfr.itest.session">
+          <session baseSessionProfile="" name="stc_ntaf" provider="com.fnfr">
+            <sessionProfile version="4.2.1.qualifier">
+              <baseApplication>http://spirent.com/NTAF/harness/STC/4.20/Main</baseApplication>
+              <sessionProperties action="open" harness="http://spirent.com/NTAF/harness/STC/4.20/Main" harnessName="Spirent TestCenter 4.20" type="com.fnfr.itest.adapter.automation.ntaf.common.documents.NtafOpenTransferableObject"/>
+              <baseProfile>project://MRQ50207_project/session_profiles/StcNtaf.ffsp</baseProfile>
+              <standalone>false</standalone>
+            </sessionProfile>
+          </session>
+          <session baseSessionProfile="" name="stc_tcl" provider="com.fnfr">
+            <sessionProfile version="4.2.1.qualifier">
+              <baseApplication>com.fnfr.svt.applications.tclsh</baseApplication>
+              <sessionProperties type="com.fnfr.svt.applications.tclsh.TclshSessionProperties"/>
+              <baseProfile>project://MRQ50207_project/session_profiles/StcTcl.ffsp</baseProfile>
+              <standalone>false</standalone>
+            </sessionProfile>
+          </session>
+          <session baseSessionProfile="" name="stc_demo" provider="com.fnfr">
+            <sessionProfile version="4.2.1.qualifier">
+              <baseApplication>http://spirent.com/NTAF/harness/STC/4.20/Main</baseApplication>
+              <sessionProperties action="open" harness="http://spirent.com/NTAF/harness/STC/4.20/Main" harnessName="Spirent TestCenter 4.20" type="com.fnfr.itest.adapter.automation.ntaf.common.documents.NtafOpenTransferableObject"/>
+              <baseProfile>project://MRQ50207_project/session_profiles/StcNtaf.ffsp</baseProfile>
+              <standalone>false</standalone>
+            </sessionProfile>
+          </session>
+        </extensions>
+        <resource guid="dc6b10de-a163-464b-80c5-3c2db7c5e8ab" id="resource_0_0" type="port">
+          <property name="name">port1</property>
+          <property name="location" vendor="com.spirent">//10.47.73.51/1/1</property>
+        </resource>
+        <resource guid="6daa65b9-36bd-474b-852d-99ea59154860" id="resource_0_1" type="port">
+          <property name="name">port2</property>
+          <property name="location" vendor="com.spirent">//10.47.73.51/1/2</property>
+        </resource>
+        <resource guid="22475af8-e953-4ac7-87e2-02240bfde358" id="resource_0_2" type="port">
+          <property name="name">port3</property>
+          <property name="location" vendor="com.spirent">//10.47.73.51/1/3</property>
+        </resource>
+        <resource guid="3415922e-6fc4-4ee4-b06f-a56bed46cd0e" id="resource_0_3" type="port">
+          <property name="name">port4</property>
+          <property name="side" vendor="com.adtran">east</property>
+          <property name="location" vendor="com.spirent">//10.47.73.51/1/4</property>
+        </resource>
+      </resource>
+      <resource guid="71d3c926-2165-4935-9c26-ab7ea5ea270a" id="resource_1" type="switch">
+        <boundary height="62" width="51" x="120" y="396"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/switch_32.gif</property>
+        <property name="name">West</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="c8fbad57-6ad4-47a3-aa6b-b83f6ad36a60" id="resource_1_0" type="port">
+          <property name="name">port1</property>
+        </resource>
+        <resource guid="150b8d4d-f96f-484e-b5aa-843e3af18edf" id="resource_1_1" type="port">
+          <property name="name">port2</property>
+        </resource>
+        <resource guid="e17b70e5-87e6-490f-9465-836bbf9cef2e" id="resource_1_2" type="port">
+          <property name="name">port3</property>
+        </resource>
+        <resource guid="3934838e-9571-438b-aeb3-ae54ce56e570" id="resource_1_3" type="port">
+          <property name="name">port4</property>
+        </resource>
+        <resource guid="40d97839-ffc1-4893-a65b-1e2e9280d50c" id="resource_1_4" type="port">
+          <property name="name">port5</property>
+        </resource>
+        <resource guid="a83dc08b-29a7-4d2c-9b4a-aaf6cbd5a5d6" id="resource_1_5" type="port">
+          <property name="name">port6</property>
+        </resource>
+        <resource guid="273f3101-a31d-4825-a9fe-b8351e712246" id="resource_1_6" type="port">
+          <property name="name">port7</property>
+        </resource>
+        <resource guid="bf8262e4-570b-47e3-a5d2-b3e539a102f5" id="resource_1_7" type="port">
+          <property name="name">port8</property>
+        </resource>
+        <resource guid="0e4ecce2-ae3d-48f4-868f-0e6705564b02" id="resource_1_8" type="port">
+          <property name="name">port9</property>
+        </resource>
+        <resource guid="c98063b2-4105-4f90-9fb6-94e33395b57a" id="resource_1_9" type="port">
+          <property name="name">port10</property>
+        </resource>
+        <resource guid="15ee7f61-6e33-468f-9133-8a023d698c11" id="resource_1_10" type="port">
+          <property name="name">port11</property>
+        </resource>
+        <resource guid="1f70c6c4-0801-4644-8e1c-11bbc907271e" id="resource_1_11" type="port">
+          <property name="name">port12</property>
+        </resource>
+      </resource>
+      <resource guid="91904f87-e636-4398-8dcf-dbe763cfc15f" id="resource_2" type="router">
+        <boundary height="62" width="49" x="66" y="216"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">router1</property>
+        <property name="setBgpPeer" vendor="com.adtran">false</property>
+        <property name="numberAdvertisedRoutes" vendor="com.adtran">110</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="9ff24a2d-1a1b-4143-8e14-1d32ead548c1" id="resource_2_0" type="port">
+          <property name="name">port1</property>
+          <property name="location" vendor="com.adtran">1/0/13</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.53</property>
+        </resource>
+        <resource guid="328ba1c2-b8a1-485c-8901-29b290f93cef" id="resource_2_1" type="port">
+          <property name="name">port2</property>
+          <property name="location" vendor="com.adtran">1/0/14</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.153</property>
+        </resource>
+      </resource>
+      <resource guid="3714e775-2c67-4e64-add7-3f56d9298728" id="resource_3" type="router">
+        <boundary height="62" width="49" x="180" y="216"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">router2</property>
+        <property name="setBgpPeer" vendor="com.adtran">true</property>
+        <property name="numberAdvertisedRoutes" vendor="com.adtran">120</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="50d5f408-4608-4e72-b1f6-ac992406ee65" id="resource_3_0" type="port">
+          <property name="name">port1</property>
+          <property name="location" vendor="com.adtran">1/0/13</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.54</property>
+        </resource>
+        <resource guid="65cff28c-aac3-4333-ab61-b982ee71f86b" id="resource_3_1" type="port">
+          <property name="name">port2</property>
+          <property name="location" vendor="com.adtran">1/0/14</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.154</property>
+        </resource>
+      </resource>
+      <resource guid="2e790278-477a-4d5f-bba5-66d8e72b981e" id="resource_4" type="router">
+        <boundary height="62" width="49" x="288" y="216"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">router3</property>
+        <property name="setBgpPeer" vendor="com.adtran">false</property>
+        <property name="numberAdvertisedRoutes" vendor="com.adtran">130</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="6054757d-b6b5-446a-b1c6-8dd081377f52" id="resource_4_0" type="port">
+          <property name="name">port1</property>
+          <property name="location" vendor="com.adtran">1/0/13</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.55</property>
+        </resource>
+        <resource guid="008e4f80-78cc-4450-a36b-33e3017f124e" id="resource_4_1" type="port">
+          <property name="name">port2</property>
+          <property name="location" vendor="com.adtran">1/0/14</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.155</property>
+        </resource>
+      </resource>
+      <resource guid="2d73ab10-8908-44fa-ae10-59f45ac45465" id="resource_5" type="router">
+        <boundary height="62" width="49" x="456" y="216"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">router4</property>
+        <property name="setBgpPeer" vendor="com.adtran">false</property>
+        <property name="numberAdvertisedRoutes" vendor="com.adtran">140</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="e775fe81-e5f2-4f5d-8429-b5bcfd62da0b" id="resource_5_0" type="port">
+          <property name="name">port1</property>
+          <property name="location" vendor="com.adtran">1/0/13</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.56</property>
+        </resource>
+        <resource guid="99343f57-5547-4343-acb3-c825f38e7837" id="resource_5_1" type="port">
+          <property name="name">port2</property>
+          <property name="location" vendor="com.adtran">1/0/14</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.156</property>
+        </resource>
+      </resource>
+      <resource guid="874b59f5-2e68-4b48-b42b-fb27a336c537" id="resource_6" type="router">
+        <boundary height="62" width="49" x="564" y="216"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">router5</property>
+        <property name="setBgpPeer" vendor="com.adtran">false</property>
+        <property name="numberAdvertisedRoutes" vendor="com.adtran">150</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="0be0fdd5-7d10-4c22-bd98-39cd643ff29d" id="resource_6_0" type="port">
+          <property name="name">port1</property>
+          <property name="location" vendor="com.adtran">1/0/13</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.57</property>
+        </resource>
+        <resource guid="6d74aef8-8577-4597-9833-560bf01d2887" id="resource_6_1" type="port">
+          <property name="name">port2</property>
+          <property name="location" vendor="com.adtran">1/0/14</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.157</property>
+        </resource>
+      </resource>
+      <resource guid="81708b40-bd1d-4734-98b0-5ff9345763ad" id="resource_7" type="router">
+        <boundary height="62" width="61" x="648" y="132"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">router10</property>
+        <property name="setBgpPeer" vendor="com.adtran">false</property>
+        <property name="numberAdvertisedRoutes" vendor="com.adtran">200</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="5abfa23b-714b-4d9c-b92c-95aa13149a75" id="resource_7_0" type="port">
+          <property name="name">port1</property>
+          <property name="location" vendor="com.adtran">1/0/13</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.62</property>
+        </resource>
+        <resource guid="95260666-f59c-44a9-8c23-df9d7d40cc5c" id="resource_7_1" type="port">
+          <property name="name">port2</property>
+          <property name="location" vendor="com.adtran">1/0/14</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.162</property>
+        </resource>
+      </resource>
+      <resource guid="399e14a1-1d47-4f74-bba5-e2767c276110" id="resource_8" type="router">
+        <boundary height="62" width="49" x="132" y="132"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">router6</property>
+        <property name="setBgpPeer" vendor="com.adtran">false</property>
+        <property name="numberAdvertisedRoutes" vendor="com.adtran">160</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="34192b70-2718-43aa-a6a2-ddb75634699d" id="resource_8_0" type="port">
+          <property name="name">port1</property>
+          <property name="location" vendor="com.adtran">1/0/13</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.58</property>
+        </resource>
+        <resource guid="af934f60-f5e2-42f3-8a32-4a81b3b7371d" id="resource_8_1" type="port">
+          <property name="name">port2</property>
+          <property name="location" vendor="com.adtran">1/0/14</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.158</property>
+        </resource>
+      </resource>
+      <resource guid="69174bab-3be7-4ce6-ab8a-419a9ab3dd2e" id="resource_9" type="router">
+        <boundary height="62" width="49" x="240" y="132"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">router7</property>
+        <property name="setBgpPeer" vendor="com.adtran">false</property>
+        <property name="numberAdvertisedRoutes" vendor="com.adtran">170</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="2f3730a7-8c86-4ff1-9798-c5430ac2d87a" id="resource_9_0" type="port">
+          <property name="name">port1</property>
+          <property name="location" vendor="com.adtran">1/0/13</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.59</property>
+        </resource>
+        <resource guid="b7858ec4-5ff7-4a3e-a07d-254e5e967877" id="resource_9_1" type="port">
+          <property name="name">port2</property>
+          <property name="location" vendor="com.adtran">1/0/14</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.159</property>
+        </resource>
+      </resource>
+      <resource guid="45e7ec26-6a08-462b-9e0b-dbceace32002" id="resource_10" type="router">
+        <boundary height="62" width="49" x="360" y="132"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">router8</property>
+        <property name="setBgpPeer" vendor="com.adtran">true</property>
+        <property name="numberAdvertisedRoutes" vendor="com.adtran">180</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="b5eb8ae2-796b-4ffb-84bd-8eede79672ae" id="resource_10_0" type="port">
+          <property name="name">port1</property>
+          <property name="location" vendor="com.adtran">1/0/13</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.60</property>
+        </resource>
+        <resource guid="b3599721-61e9-4a2f-9e5b-9265ce43559f" id="resource_10_1" type="port">
+          <property name="name">port2</property>
+          <property name="location" vendor="com.adtran">1/0/14</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.160</property>
+        </resource>
+      </resource>
+      <resource guid="4aeacc5c-a647-4541-88a9-b5445d4a01f7" id="resource_11" type="router">
+        <boundary height="62" width="49" x="504" y="132"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">router9</property>
+        <property name="setBgpPeer" vendor="com.adtran">false</property>
+        <property name="numberAdvertisedRoutes" vendor="com.adtran">190</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="e8bf3c64-7671-4075-baf8-4ef84232fe43" id="resource_11_0" type="port">
+          <property name="name">port1</property>
+          <property name="location" vendor="com.adtran">1/0/13</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.61</property>
+        </resource>
+        <resource guid="73029c20-ab31-4bb4-9ded-fae0ecc37c82" id="resource_11_1" type="port">
+          <property name="name">port2</property>
+          <property name="location" vendor="com.adtran">1/0/14</property>
+          <property name="ipAddressV4" vendor="com.adtran">192.85.1.161</property>
+        </resource>
+      </resource>
+      <resource guid="395154ef-e4d1-49b1-ba40-6dccaf1439ca" id="resource_12" type="switch">
+        <boundary height="62" width="51" x="696" y="408"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/switch_32.gif</property>
+        <property name="name">East</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="6f97e42b-30bd-47a1-b263-1f317b8955ca" id="resource_12_0" type="port">
+          <property name="name">port1</property>
+        </resource>
+        <resource guid="f83e23ff-1595-49c1-990c-2065359e576a" id="resource_12_1" type="port">
+          <property name="name">port2</property>
+        </resource>
+        <resource guid="7b2bff8a-d9ff-4534-bcbb-d1a8218c551b" id="resource_12_2" type="port">
+          <property name="name">port3</property>
+        </resource>
+        <resource guid="5a349ce6-b2c0-4c93-82f7-84bfe5bf7227" id="resource_12_3" type="port">
+          <property name="name">port4</property>
+        </resource>
+        <resource guid="5279e3b2-ff90-495f-ad8f-2ee2c04d8125" id="resource_12_4" type="port">
+          <property name="name">port5</property>
+        </resource>
+        <resource guid="66f4b005-b386-4fbc-95d9-8f260e0d79c8" id="resource_12_5" type="port">
+          <property name="name">port6</property>
+        </resource>
+        <resource guid="b7f4ab0e-6546-4ec7-bd58-e3a412459e7f" id="resource_12_6" type="port">
+          <property name="name">port7</property>
+        </resource>
+        <resource guid="3d142794-4d60-4d60-8387-386f5f27845c" id="resource_12_7" type="port">
+          <property name="name">port8</property>
+        </resource>
+        <resource guid="805397c5-9cf4-4d0c-9329-f16051b742ce" id="resource_12_8" type="port">
+          <property name="name">port9</property>
+        </resource>
+        <resource guid="8f8efb45-0c31-458b-a5f1-07e2f840fb3a" id="resource_12_9" type="port">
+          <property name="name">port10</property>
+        </resource>
+        <resource guid="39885fdf-f0ca-4b88-ab77-87e25680a57f" id="resource_12_10" type="port">
+          <property name="name">port11</property>
+        </resource>
+        <resource guid="8d026b6c-6c79-48ce-9a67-3e3a8cb2cf80" id="resource_12_11" type="port">
+          <property name="name">port12</property>
+        </resource>
+      </resource>
+    </resources>
+    <connectivity>
+      <link id="link_0">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet1</property>
+        <endpoint id="resource_1_0"/>
+        <endpoint id="resource_0_0"/>
+      </link>
+      <link id="link_2">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet3</property>
+        <endpoint id="resource_2_0"/>
+        <endpoint id="resource_1_2"/>
+      </link>
+      <link id="link_3">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet4</property>
+        <endpoint id="resource_3_0"/>
+        <endpoint id="resource_1_3"/>
+      </link>
+      <link id="link_4">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet5</property>
+        <endpoint id="resource_4_0"/>
+        <endpoint id="resource_1_4"/>
+      </link>
+      <link id="link_5">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet6</property>
+        <endpoint id="resource_5_0"/>
+        <endpoint id="resource_1_5"/>
+      </link>
+      <link id="link_6">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet7</property>
+        <endpoint id="resource_6_0"/>
+        <endpoint id="resource_1_6"/>
+      </link>
+      <link id="link_7">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet8</property>
+        <endpoint id="resource_8_0"/>
+        <endpoint id="resource_1_7"/>
+      </link>
+      <link id="link_8">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet9</property>
+        <endpoint id="resource_9_0"/>
+        <endpoint id="resource_1_8"/>
+      </link>
+      <link id="link_9">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet10</property>
+        <endpoint id="resource_10_0"/>
+        <endpoint id="resource_1_9"/>
+      </link>
+      <link id="link_10">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet11</property>
+        <endpoint id="resource_11_0"/>
+        <endpoint id="resource_1_10"/>
+      </link>
+      <link id="link_11">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet12</property>
+        <endpoint id="resource_7_0"/>
+        <endpoint id="resource_1_11"/>
+      </link>
+      <link id="link_12">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet13</property>
+        <endpoint id="resource_0_1"/>
+        <endpoint id="resource_12_0"/>
+      </link>
+      <link id="link_13">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet14</property>
+        <endpoint id="resource_0_2"/>
+        <endpoint id="resource_1_1"/>
+      </link>
+      <link id="link_14">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet15</property>
+        <endpoint id="resource_12_1"/>
+        <endpoint id="resource_0_3"/>
+      </link>
+      <link id="link_15">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet16</property>
+        <endpoint id="resource_2_1"/>
+        <endpoint id="resource_12_2"/>
+      </link>
+      <link id="link_16">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet17</property>
+        <endpoint id="resource_3_1"/>
+        <endpoint id="resource_12_3"/>
+      </link>
+      <link id="link_17">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet18</property>
+        <endpoint id="resource_4_1"/>
+        <endpoint id="resource_12_4"/>
+      </link>
+      <link id="link_18">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet19</property>
+        <endpoint id="resource_5_1"/>
+        <endpoint id="resource_12_5"/>
+      </link>
+      <link id="link_19">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet20</property>
+        <endpoint id="resource_6_1"/>
+        <endpoint id="resource_12_6"/>
+      </link>
+      <link id="link_20">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet21</property>
+        <endpoint id="resource_8_1"/>
+        <endpoint id="resource_12_7"/>
+      </link>
+      <link id="link_21">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet22</property>
+        <endpoint id="resource_9_1"/>
+        <endpoint id="resource_12_8"/>
+      </link>
+      <link id="link_22">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet23</property>
+        <endpoint id="resource_10_1"/>
+        <endpoint id="resource_12_9"/>
+      </link>
+      <link id="link_23">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet24</property>
+        <endpoint id="resource_11_1"/>
+        <endpoint id="resource_12_10"/>
+      </link>
+      <link id="link_24">
+        <property name="type">ethernet</property>
+        <property name="name">ethernet25</property>
+        <endpoint id="resource_7_1"/>
+        <endpoint id="resource_12_11"/>
+      </link>
+    </connectivity>
+  </body>
+  <illustration>
+    <layer/>
+  </illustration>
+</tbml>

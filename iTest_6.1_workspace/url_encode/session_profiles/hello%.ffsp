@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<SessionTemplate version="6.1.0.863d7a9">
+    <baseApplication>com.fnfr.svt.applications.tclsh</baseApplication>
+    <sessionProperties type="com.fnfr.svt.applications.tclsh.TclshSessionProperties">
+        <tclProperties>
+            <interpreterLocation inherit="false">C:/Tcl85/bin/tclsh.exe</interpreterLocation>
+        </tclProperties>
+    </sessionProperties>
+    <responseLibrary inherit="false">project://response%20map%20library/</responseLibrary>
+    <emulationSource inherit="false">project://response%20map%20library/</emulationSource>
+    <formMapLibrary inherit="false">project://form%20map%20library/</formMapLibrary>
+    <sessionClassTestCase inherit="false">project://url_encode/test_cases/quick%20call%25.fftc</sessionClassTestCase>
+    <baseProfile>base%25.ffsp</baseProfile>
+    <standalone>false</standalone>
+</SessionTemplate>

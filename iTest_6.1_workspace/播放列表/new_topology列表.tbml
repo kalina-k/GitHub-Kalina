@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tbml xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.teslaalliance.org/trs/tbml/1.0/tbml-core.xsd" xmlns="http://www.teslaalliance.org/trs/tbml/1.0">
+  <header>
+    <name>new_topology列表</name>
+    <description></description>
+    <property name="author">emiller</property>
+    <property name="dateCreated">2017-09-09T15:46:19.665-07:00</property>
+    <property name="dateModified">2017-09-09T15:46:30.950-07:00</property>
+    <property name="creationTool" vendor="com.fnfr">com.fnfr.itest.topology.tbml.diagram</property>
+    <property name="creationToolVersion" vendor="com.fnfr">6.1.0.863d7a9</property>
+  </header>
+  <body>
+    <resources>
+      <resource guid="a084793f-3d43-4a2d-898c-cbdd5c87069b" id="resource_0" type="network">
+        <boundary height="100" width="100" x="386" y="206"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/cloud_32.gif</property>
+        <property name="name">network1</property>
+        <property name="inventoryName"></property>
+      </resource>
+    </resources>
+    <connectivity/>
+  </body>
+  <illustration>
+    <layer/>
+  </illustration>
+</tbml>

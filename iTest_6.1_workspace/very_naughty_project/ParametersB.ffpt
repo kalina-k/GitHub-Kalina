@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ParameterTree version="4.4.0.75339">
+    <parameters escape="true">
+        <parameters xmlns:pt="http://www.fnfr.com/schemas/parameterTree">
+            <param1 pt:description="Description 1">value1</param1>
+            <param4 pt:description="Description 4">value4</param4>
+            <param3b pt:description="Description 3b">
+                <param3_1 pt:description="Description 3_1">value3_1</param3_1>
+                <param3_2 pt:description="Description 3_2">
+                    <param3_2_1 pt:description="Description 3_2_1">value3_2_1</param3_2_1>
+                    <param3_2_2 pt:description="Description 3_2_2">value3_2_2</param3_2_2>
+                </param3_2>
+                <param3_3 pt:description="Description 3_3">value3_3</param3_3>
+            </param3b>
+        </parameters>
+    </parameters>
+</ParameterTree>

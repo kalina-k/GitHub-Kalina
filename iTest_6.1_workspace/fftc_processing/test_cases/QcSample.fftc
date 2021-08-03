@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<testCase version="5.1.0.77511" entryPoint="open_session">
+    <general>
+        <rendering tclNamespace="velocity" testCaseId="QuickCall456" testCaseName="Sample QuickCalls"/>
+        <documentation>QuickCall Example</documentation>
+        <notes>An example QuickCall (TM) library.</notes>
+        <owner>I. M. Developer</owner>
+        <sessionClass includeTestCase="true" sessionType="project://fftc_processing/session_profiles/SshQc.ffsp"/>
+    </general>
+    <procedures>
+        <item name="open_session">
+            <steps>
+                <item guid="6b9c1e2e-64d5-43e1-a848-1510ec1ba615" action="open" session="s1">
+                    <command>
+                        <body>project://fftc_processing/session_profiles/Ssh.ffsp</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.OpenStepPropertyGroup">
+                        <stepProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                        <sessionProperties type="com.fnfr.svt.applications.ssh.documents.SSHProperties"/>
+                        <sessionClass type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    </applicationProperties>
+                </item>
+            </steps>
+        </item>
+        <item name="list_tools" isPublic="true" defaultSessionProfile="project://fftc_processing/session_profiles/Ssh.ffsp">
+            <description>List Data Tools</description>
+            <steps>
+                <item guid="be967ba1-d6c4-4493-9e5f-14b2ce6b7970" action="command" session="$session">
+                    <command>
+                        <body>echo &quot;list tools arg1: $arg1, arg2: $arg2&quot;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                </item>
+                <item guid="c91dcf17-de63-47fd-b42a-e4d0d0e05443" action="command" session="$session">
+                    <command>
+                        <body>ls /data/tools</body>
+                    </command>
+                    <postProcessing>
+                        <storeResponseAt>listing</storeResponseAt>
+                    </postProcessing>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                </item>
+                <item guid="30357738-d875-48c0-985f-659f07b0ac76" action="write">
+                    <command>
+                        <body>$listing</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                </item>
+            </steps>
+            <author>emiller</author>
+            <version>1.0</version>
+            <multilineDescription>A procedure for listing tools in /data/tools.</multilineDescription>
+            <arguments>
+                <item name="arg1">
+                    <description>arg1 Description</description>
+                    <defaultValue>arg1 default</defaultValue>
+                </item>
+                <item name="arg2">
+                    <description>arg2 Description</description>
+                    <defaultValue>arg2 default</defaultValue>
+                </item>
+            </arguments>
+            <response>{&quot;name&quot;:&quot;Cisco&quot;,&quot;ip&quot;:&quot;1.0.0.1&quot;}</response>
+        </item>
+        <item name="list_logs" isPublic="true" defaultSessionProfile="project://fftc_processing/session_profiles/Ssh.ffsp">
+            <description>List Data Logs</description>
+            <steps>
+                <item guid="72dc51c7-1a11-422f-8125-d3a37b47d340" action="command" session="$session">
+                    <command>
+                        <body>echo &quot;list logs arg1: $arg1, arg2: $arg2&quot;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                </item>
+                <item guid="403bc196-7a32-4012-89c5-0e5a299a1a65" action="command" session="$session">
+                    <command>
+                        <body>ls /data/logs</body>
+                    </command>
+                    <postProcessing>
+                        <storeResponseAt>listing</storeResponseAt>
+                        <storeResponseText>true</storeResponseText>
+                    </postProcessing>
+                    <applicationProperties type="com.fnfr.svt.editors.terminal.documents.StepDefaultProperties"/>
+                </item>
+                <item guid="05879d21-1ced-4cb9-9e5a-43c706448ddd" action="write">
+                    <command>
+                        <body>$listing</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                </item>
+            </steps>
+            <author>emiller</author>
+            <version>2.0</version>
+            <multilineDescription>A procedure for listing logs in /data/logs.</multilineDescription>
+            <arguments>
+                <item name="arg1">
+                    <description>arg1 Description</description>
+                    <defaultValue>arg1 default</defaultValue>
+                </item>
+                <item name="arg2">
+                    <description>arg2 Description</description>
+                    <defaultValue>arg2 default</defaultValue>
+                </item>
+            </arguments>
+            <response>{&quot;array&quot;:[1,2,3],&quot;boolean&quot;:true,&quot;new&quot;:&quot;notNull&quot;,&quot;number&quot;:123,&quot;object&quot;:{&quot;a&quot;:&quot;b&quot;,&quot;c&quot;:&quot;d&quot;,&quot;e&quot;:&quot;f&quot;},&quot;string&quot;:&quot;Hello World&quot;}
+
+{
+  &quot;array&quot;:[
+    1,
+    2,
+    3
+  ],
+  &quot;boolean&quot;:true,
+  &quot;new&quot;:&quot;notNull&quot;,
+  &quot;number&quot;:123,
+  &quot;object&quot;:{
+    &quot;a&quot;:&quot;b&quot;,
+    &quot;c&quot;:&quot;d&quot;,
+    &quot;e&quot;:&quot;f&quot;
+  },
+  &quot;string&quot;:&quot;Hello World&quot;
+}</response>
+        </item>
+    </procedures>
+</testCase>

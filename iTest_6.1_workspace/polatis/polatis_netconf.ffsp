@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<SessionTemplate version="6.1.0.863d7a9">
+    <baseApplication>com.fnfr.itest.applications.spirent.netconf.tool</baseApplication>
+    <sessionProperties type="com.fnfr.svt.adapter.automation.tools.common.documents.TransferableDocumentObject" transferableToolId="com.fnfr.itest.applications.spirent.netconf.tool" transferableType="com.fnfr.itest.applications.spirent.netconf.NetConfSessionProperties" ipAddress="localhost" ipAddress.inherit="false" port="22004" port.inherit="false" user="root" user.inherit="false"/>
+</SessionTemplate>

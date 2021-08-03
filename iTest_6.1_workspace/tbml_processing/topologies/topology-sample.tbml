@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tbml xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.teslaalliance.org/trs/tbml/1.0/tbml-core.xsd" xmlns="http://www.teslaalliance.org/trs/tbml/1.0">
+  <header>
+    <name></name>
+    <description></description>
+    <property name="author">emiller</property>
+    <property name="dateCreated">2013-11-16T10:36:27.110-08:00</property>
+    <property name="dateModified">2013-11-16T11:07:27.066-08:00</property>
+    <property name="creationTool" vendor="com.fnfr">com.fnfr.itest.topology.tbml.diagram</property>
+    <property name="creationToolVersion" vendor="com.fnfr">4.3.0.71664</property>
+  </header>
+  <body>
+    <resources>
+      <resource guid="daea0325-66e4-415a-99bb-a3592e3c6a31" id="resource_0" type="trafficgen">
+        <boundary height="100" width="100" x="204" y="110"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/Traffic-Generator_32.gif</property>
+        <property name="name">RT0 (Test tool)</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="7025c7a6-b3d3-477e-bcc5-5bf0627d8ee8" id="resource_0_0" type="port">
+          <property name="name">RT0-1</property>
+        </resource>
+        <resource guid="ffb09f77-2e0e-4104-9307-5720954d2fa2" id="resource_0_1" type="port">
+          <property name="name">RT0-2</property>
+        </resource>
+      </resource>
+      <resource guid="d3fa76f9-4717-4e47-8ee2-2e9ed55d31a1" id="resource_1" type="router">
+        <boundary height="100" width="100" x="204" y="372"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">R1 CE1</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="7144190b-9ab6-4493-a6f3-28b63c8b81c7" id="resource_1_0" type="port">
+          <property name="name">R1-1</property>
+        </resource>
+        <resource guid="de09e314-4eb8-44aa-b512-69dea3b2a6e4" id="resource_1_1" type="port">
+          <property name="name">R1-2</property>
+        </resource>
+        <resource guid="488455f4-e553-418d-8467-01377a2f668e" id="resource_1_2" type="port">
+          <property name="name">R1-3</property>
+        </resource>
+        <resource guid="3f8d490d-3d76-439a-90a7-a5d65e39195c" id="resource_1_3" type="port">
+          <property name="name">R1-4</property>
+        </resource>
+      </resource>
+      <resource guid="67463c13-59f8-46cc-b262-1ac5e73d8438" id="resource_2" type="router">
+        <boundary height="100" width="100" x="375" y="375"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">R0 PE1</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="9ecc3705-a263-44a2-88da-b28a64bc6d94" id="resource_2_0" type="port">
+          <property name="name">R0-1</property>
+        </resource>
+        <resource guid="08100535-4b01-4601-8a71-f4d7f09533e1" id="resource_2_1" type="port">
+          <property name="name">R0-2</property>
+        </resource>
+        <resource guid="761bec4d-4de0-45c3-83a3-38b7f08dce37" id="resource_2_2" type="port">
+          <property name="name">R0-3</property>
+        </resource>
+        <resource guid="e4c13bef-4cac-4a58-95d2-77949df0f8da" id="resource_2_3" type="port">
+          <property name="name">R0-4</property>
+        </resource>
+      </resource>
+      <resource guid="5e9d963a-f393-4ab8-b836-4213bf53ccc4" id="resource_3" type="router">
+        <boundary height="100" width="100" x="552" y="372"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">R3 P</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="bbab4eb7-a158-437f-a518-613c80bc3faf" id="resource_3_0" type="port">
+          <property name="name">R3-1</property>
+        </resource>
+        <resource guid="70634afe-d19c-4009-b895-945f31ed09b7" id="resource_3_1" type="port">
+          <property name="name">R3-2</property>
+        </resource>
+        <resource guid="ffa75714-7db6-4963-af09-49309b43bb57" id="resource_3_2" type="port">
+          <property name="name">R3-3</property>
+        </resource>
+        <resource guid="eb38fcc0-aac0-4a26-8087-58dbd012145e" id="resource_3_3" type="port">
+          <property name="name">R3-4</property>
+        </resource>
+      </resource>
+      <resource guid="0ba4c934-496b-4df1-82fe-316f71c57e25" id="resource_4" type="router">
+        <boundary height="100" width="100" x="720" y="372"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">R2 PE2</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="70c3fb92-4328-466c-851d-e3332a5c0dd4" id="resource_4_0" type="port">
+          <property name="name">R2-1</property>
+        </resource>
+        <resource guid="9a5cf300-70ab-4e43-9f32-b1c177e9dfc4" id="resource_4_1" type="port">
+          <property name="name">R2-2</property>
+        </resource>
+        <resource guid="7740cb56-0195-4c43-9911-d6489ecccefe" id="resource_4_2" type="port">
+          <property name="name">R2-3</property>
+        </resource>
+        <resource guid="893ca7c3-d336-4e4d-a43c-1e00d98c3613" id="resource_4_3" type="port">
+          <property name="name">R2-4</property>
+        </resource>
+      </resource>
+      <resource guid="522ba902-e1da-4ea7-b85c-4edaf0d08c02" id="resource_5" type="router">
+        <boundary height="100" width="100" x="888" y="372"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/router_32.gif</property>
+        <property name="name">R4 CE2</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="5ec0bbbd-2cae-4ef7-b1b0-7a3485670025" id="resource_5_0" type="port">
+          <property name="name">R4-1</property>
+        </resource>
+        <resource guid="ff645fb9-a6e0-457a-bfd8-4151ed13c2f8" id="resource_5_1" type="port">
+          <property name="name">R4-2</property>
+        </resource>
+        <resource guid="8d23f0d4-7668-4aca-a55e-d1c1d779ab59" id="resource_5_2" type="port">
+          <property name="name">R4-3</property>
+        </resource>
+        <resource guid="2ceb1475-de0e-48fb-93eb-75b19118af7d" id="resource_5_3" type="port">
+          <property name="name">R4-4</property>
+        </resource>
+      </resource>
+      <resource guid="ff3cf448-f592-4ca3-97db-a17e9b8c59e4" id="resource_6" type="trafficgen">
+        <boundary height="100" width="100" x="876" y="108"/>
+        <property name="iconURI">platform:/plugin/com.fnfr.itest.topology.tbml.edit/icons/full/topology/Traffic-Generator_32.gif</property>
+        <property name="name">RT0a</property>
+        <property name="isSessionRequired" vendor="com.fnfr">false</property>
+        <resource guid="a9deea23-89c8-44d5-9276-8202fb5da674" id="resource_6_0" type="port">
+          <property name="name">RT0-3</property>
+        </resource>
+        <resource guid="e6943c78-291a-4eef-851a-0981139c1239" id="resource_6_1" type="port">
+          <property name="name">RT0-4</property>
+        </resource>
+      </resource>
+    </resources>
+    <connectivity>
+      <link id="link_0">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet1</property>
+        <endpoint id="resource_0_0"/>
+        <endpoint id="resource_1_0"/>
+      </link>
+      <link id="link_1">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet2</property>
+        <endpoint id="resource_0_1"/>
+        <endpoint id="resource_1_1"/>
+      </link>
+      <link id="link_2">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet3</property>
+        <endpoint id="resource_1_2"/>
+        <endpoint id="resource_2_0"/>
+      </link>
+      <link id="link_3">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet4</property>
+        <endpoint id="resource_1_3"/>
+        <endpoint id="resource_2_1"/>
+      </link>
+      <link id="link_4">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet5</property>
+        <endpoint id="resource_2_2"/>
+        <endpoint id="resource_3_0"/>
+      </link>
+      <link id="link_5">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet6</property>
+        <endpoint id="resource_2_3"/>
+        <endpoint id="resource_3_1"/>
+      </link>
+      <link id="link_6">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet7</property>
+        <endpoint id="resource_3_2"/>
+        <endpoint id="resource_4_0"/>
+      </link>
+      <link id="link_7">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet8</property>
+        <endpoint id="resource_3_3"/>
+        <endpoint id="resource_4_1"/>
+      </link>
+      <link id="link_8">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet9</property>
+        <endpoint id="resource_4_2"/>
+        <endpoint id="resource_5_0"/>
+      </link>
+      <link id="link_9">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet10</property>
+        <endpoint id="resource_4_3"/>
+        <endpoint id="resource_5_1"/>
+      </link>
+      <link id="link_10">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet11</property>
+        <endpoint id="resource_6_0"/>
+        <endpoint id="resource_5_2"/>
+      </link>
+      <link id="link_11">
+        <property name="type">ethernet</property>
+        <property name="linkRoutingType">curve</property>
+        <property name="name">ethernet12</property>
+        <endpoint id="resource_6_1"/>
+        <endpoint id="resource_5_3"/>
+      </link>
+    </connectivity>
+  </body>
+  <illustration>
+    <layer/>
+  </illustration>
+</tbml>

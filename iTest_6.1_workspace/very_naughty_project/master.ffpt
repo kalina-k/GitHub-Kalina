@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ParameterTree version="4.4.0.75339">
+    <parameters escape="true">
+        <parameters xmlns:pt="http://www.fnfr.com/schemas/parameterTree">
+            <master_param>1</master_param>
+        </parameters>
+    </parameters>
+    <includeParameters>
+        <item>slave.ffpt</item>
+    </includeParameters>
+</ParameterTree>

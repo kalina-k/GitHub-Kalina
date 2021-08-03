@@ -1,0 +1,165 @@
+{
+    "defaultData":{
+        "description":"%file% default script run from core regression",
+        "headline":"%file% from Core Regression Suite default",
+        "owner":"Joe Default",
+        "language":"python",
+        "testCaseId":"TC.CR.%file%.default",
+        "testCaseName":"Core Regression %file% default",
+        "namespace":"CoreRegression default",
+        "hidden":false,
+        "timeout":10,
+        "verdictMethod":"EXIT_CODE_VERDICT_PARSING",
+        "commandSequence":[
+            "%file% %parameterNameValuePairList% default"
+        ],
+        "parameters":[
+            {
+                "name":"param0",
+                "value":"value0 default"
+            },
+            {
+                "name":"param1",
+                "value":"value1 default"
+            },
+            {
+                "name":"param1_custom",
+                "value":"value1 default",
+                "type":"default_custom"
+            }
+        ],
+        "customParameterTypes":[
+            {
+                "name":"default_custom",
+                "choices":[
+                    {
+                        "name":"default0",
+                        "description":"First default"
+                    },
+                    {
+                        "name":"default1",
+                        "description":"Second default"
+                    },
+                    {
+                        "name":"default2",
+                        "description":"Third default"
+                    }
+                ]
+            }
+        ],
+        "requirements":[
+            {
+                "name":"language",
+                "value":"python 2.7 default"
+            },
+            {
+                "name":"location",
+                "value":"austin default"
+            },
+            {
+                "name":"default",
+                "value":"default requirement"
+            }
+        ],
+        "executionMessages":{
+            "ok":".*verified.*default",
+            "info":".*DEBUG.*|.*INFO.*default",
+            "warning":".*WARNING.*default",
+            "error":".*ERROR.*|.*CRITICAL.*default"
+        },
+        "verdictParsing":{
+            "passTest":"Finished: PASSED default",
+            "passTestIfNotAlreadyFailed":"SUCCESS default",
+            "failTestIfPassing":"Failure number \\d+ default",
+            "failTest":"Finished: FAILED default"
+        }
+    },
+    "fileSets":[
+        {
+            "fileNameMatch":".*\\.py"
+        },
+        {
+            "fileNameMatch":".*\\.bash",
+            "language":"bash"
+        },
+        {
+            "fileNameMatch":"python/.*"
+        },
+        {
+            "fileNameMatch":"bash/.*",
+            "description":"%file% bash script run from core regression",
+            "headline":"%file% from Core Regression Suite bash",
+            "owner":"Joe bash",
+            "language":"bash",
+            "testCaseId":"TC.CR.%file%.bash",
+            "testCaseName":"Core Regression %file% bash",
+            "namespace":"CoreRegression bash",
+            "hidden":false,
+            "timeout":10,
+            "verdictMethod":"EXIT_CODE_VERDICT_PARSING",
+            "commandSequence":[
+                "%file% %parameterNameValuePairList% bash"
+            ],
+            "parameters":[
+                {
+                    "name":"param0",
+                    "value":"value0 bash"
+                },
+                {
+                    "name":"param1",
+                    "value":"value1 bash"
+                },
+                {
+                    "name":"param1_custom",
+                    "value":"value1 bash",
+                    "type":"bash_custom"
+                }
+            ],
+            "customParameterTypes":[
+                {
+                    "name":"bash_custom",
+                    "choices":[
+                        {
+                            "name":"bash0",
+                            "description":"First bash"
+                        },
+                        {
+                            "name":"bash1",
+                            "description":"Second bash"
+                        },
+                        {
+                            "name":"bash2",
+                            "description":"Third bash"
+                        }
+                    ]
+                }
+            ],
+            "requirements":[
+                {
+                    "name":"language",
+                    "value":"bash 3.2"
+                },
+                {
+                    "name":"location",
+                    "value":"austin bash"
+                },
+                {
+                    "name":"bash",
+                    "value":"bash requirement"
+                }
+            ],
+            "executionMessages":{
+                "ok":".*verified.*bash",
+                "info":".*DEBUG.*|.*INFO.*bash",
+                "warning":".*WARNING.*bash",
+                "error":".*ERROR.*|.*CRITICAL.*bash"
+            },
+            "verdictParsing":{
+                "passTest":"Finished: PASSED bash",
+                "passTestIfNotAlreadyFailed":"SUCCESS bash",
+                "failTestIfPassing":"Failure number \\d+ bash",
+                "failTest":"Finished: FAILED bash"
+            }
+        }
+    ]
+}

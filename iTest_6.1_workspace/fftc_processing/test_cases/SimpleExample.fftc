@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<testCase version="4.3.1.73463">
+    <general>
+        <rendering tclNamespace="sequencer" testCaseId="Eric-1" testCaseName="Simple Example"/>
+        <documentation>Simple Sequencer Example</documentation>
+        <notes>A simple example test case for the sequencer.</notes>
+        <owner>emiller</owner>
+    </general>
+    <execution>
+        <parameters version="4.3.1.73463">
+            <parameters escape="true">
+                <parameters xmlns:pt="http://www.fnfr.com/schemas/parameterTree">
+                    <simpleParam pt:description="One simple parameter">simple value</simpleParam>
+                    <secondParam pt:description="A second parameter">second value</secondParam>
+                </parameters>
+            </parameters>
+        </parameters>
+    </execution>
+    <procedures>
+        <item name="main">
+            <description>Simple example main</description>
+            <steps>
+                <item guid="6f7976aa-bdf5-4370-b8e4-cc010f6cf93d" action="comment">
+                    <command>
+                        <body>Step 1</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="a991dfd0-3ccf-4525-8808-2a14abaced30" action="eval">
+                    <command>
+                        <body>puts &quot;Step 2&quot;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="4a97bdeb-71b5-4207-8358-bc673a54d268" action="sleep">
+                    <command>
+                        <body>5</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                </item>
+                <item guid="8ad60db2-6ef8-467c-bd83-037734e3f7be" action="eval">
+                    <command>
+                        <body>set var varValue</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+                <item guid="b4182138-2c33-4ca2-a226-6cb72122b649" action="eval">
+                    <command>
+                        <body>puts &quot;Variable value $var&quot;</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    <useFieldsInCommand>false</useFieldsInCommand>
+                </item>
+            </steps>
+            <author>emiller</author>
+            <version>1.0</version>
+            <multilineDescription>The main procedure of the simple example.</multilineDescription>
+        </item>
+    </procedures>
+</testCase>

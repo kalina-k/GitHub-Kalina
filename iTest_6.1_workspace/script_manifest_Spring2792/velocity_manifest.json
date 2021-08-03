@@ -1,0 +1,59 @@
+{
+    "defaultData":{
+        "description":"%file% script run from core regression",
+        "headline":"%file% from Core Regression Suite",
+        "owner":"Joe Scripter",
+        "language":"python",
+        "testCaseId":"TC.CR.%file%",
+        "testCaseName":"Core Regression %file%",
+        "namespace":"CoreRegression",
+        "hidden":false,
+        "timeout":10,
+        "verdictMethod":"EXIT_CODE_VERDICT_PARSING",
+        "commandSequence":[
+            "%file% %parameterNameValuePairList%"
+        ],
+        "parameters":[
+            {
+                "name":"buildNumber",
+                "type":"INTEGER"
+            }
+        ],
+        "requirements":[
+            {
+                "name":"language",
+                "value":"python 2.7"
+            },
+            {
+                "name":"location",
+                "value":"austin"
+            }
+        ],
+        "executionMessages":{
+            "ok":".*verified.*",
+            "info":".*DEBUG.*|.*INFO.*",
+            "warning":".*WARNING.*",
+            "error":".*ERROR.*|.*CRITICAL.*"
+        },
+        "verdictParsing":{
+            "passTest":"Finished: PASSED",
+            "passTestIfNotAlreadyFailed":"SUCCESS",
+            "failTestIfPassing":"Failure number \\d+",
+            "failTest":"Finished: FAILED"
+        }
+    },
+    "fileSets":[
+        {
+            "fileNameMatch":".*\\.py",
+            "testCaseName":"Py Dir 1 Script",
+            "description":"Py Dir 1 Script Description",
+            "language":"python"
+        },
+        {
+            "fileNameMatch":".*\\.sh",
+            "testCaseName":"Bash Dir 1 Script",
+            "description":"Bash Dir 1 Script Description",
+            "language":"bash"
+        }
+    ]
+}

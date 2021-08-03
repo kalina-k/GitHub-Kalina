@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<testCase version="4.4.0.75339">
+    <general>
+        <rendering tclNamespace="velocity" testCaseId="Simple123" testCaseName="Simple STC"/>
+        <documentation>Simple STC Test</documentation>
+        <notes>A simple TestCenter test case to show ports.</notes>
+        <owner>I. M. Tester</owner>
+    </general>
+    <execution>
+        <parameters version="4.4.0.75339">
+            <parameters escape="true">
+                <parameters xmlns:pt="http://www.fnfr.com/schemas/parameterTree">
+                    <param1 pt:description="Description 1">value1</param1>
+                    <param2 pt:description="Description 2">value2</param2>
+                    <param3 pt:description="Description 3">
+                        <param3_1 pt:description="Description 3_1">value3_1</param3_1>
+                        <param3_2 pt:description="Description 3_2">
+                            <param3_2_1 pt:description="Description 3_2_1">value3_2_1</param3_2_1>
+                            <param3_2_2 pt:description="Description 3_2_2">value3_2_2</param3_2_2>
+                        </param3_2>
+                        <param3_3 pt:description="Description 3_3">value3_3</param3_3>
+                    </param3>
+                </parameters>
+            </parameters>
+        </parameters>
+    </execution>
+    <testbed>project://itp/topologies/topology-sample.tbml</testbed>
+    <procedures>
+        <item name="main">
+            <steps>
+                <item guid="c9d009cf-ec02-48a1-9752-72f0d997b684" action="open" session="stc">
+                    <command>
+                        <body>project://itp/session_profiles/STC.ffsp</body>
+                    </command>
+                    <applicationProperties type="com.fnfr.svt.documents.OpenStepPropertyGroup">
+                        <stepProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                        <sessionProperties type="com.fnfr.svt.adapter.automation.tools.common.documents.TransferableDocumentObject" transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.TestCenterGUISessionProperties">
+                            <configurePort transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.ConfigurePortProperties" duplexMode.inherit="false" dataPathMode.inherit="false"/>
+                            <configureCustom16bitFilter transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.Analyzer16BitFilterProperties" mask="ffff" mask.inherit="false" endOfRange="ffff" endOfRange.inherit="false"/>
+                            <configureStreamBlock transferableToolId="com.fnfr.svt.applications.spirent.testcenter.gui" transferableType="com.fnfr.itest.applications.spirent.testcenter.properties.StreamBlockProperties" enableFcsErrorInsertion.inherit="false"/>
+                        </sessionProperties>
+                        <sessionClass type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                    </applicationProperties>
+                </item>
+                <item guid="92562450-2eb9-4419-ba44-eef7d2f69d9a" action="showPorts" session="stc" normalOffset="42.283" estimatedStepExecutionTime="0.124">
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                </item>
+                <item guid="10b614e4-78ff-4a60-997c-5f1542263af4" action="close" session="stc" normalOffset="32.165">
+                    <applicationProperties type="com.fnfr.svt.documents.EmptyPropertyGroup"/>
+                </item>
+            </steps>
+        </item>
+    </procedures>
+</testCase>
