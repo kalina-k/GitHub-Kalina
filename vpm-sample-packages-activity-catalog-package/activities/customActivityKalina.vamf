@@ -1,0 +1,245 @@
+{
+	"name": "Good Times",
+	"shortDescription": "Demo Activity with Automation configured for good times",
+	"icon": "customActivityManual.svg",
+	"descriptionMarkdown": "customActivityManual.md",
+	"topology": [
+		{
+			"name": "demo-Test Topology 1",
+			"actionTitle": "Reserve",
+			"description": "Topology reservation",
+			"reservationDuration": "40",
+			"automation": [
+				{
+					"allowToRunWithOptions":true,
+					"tags": ["agentReqTag","fun_times"],
+					"description": "Test Case with agent requirements",
+					"requirements": [
+						{
+							"name": "testreq1",
+							"value": "testvalue2"
+						},
+						{
+							"name": "testreqnew1",
+							"value": "testnewvalue2"
+						}
+					]
+				},
+				{
+					"allowToRunWithOptions":true,
+					"testPath": "main/_runlists/RunlistAgentReq.vrl",
+					"parametersList": [],
+					"requirements": [
+						{
+							"name": "testreq1",
+							"value": "testvalue2"
+						},
+						{
+							"name": "testnewreq1",
+							"value": "testnewvalue1"
+						}
+					]
+				},
+				{
+					"allowToRunWithOptions":true,
+					"testPath": "demo/activity-catalog-assets/test_cases/runlistParamFile.fftc",
+					"description": "Test Case with parameter file defined in manifest",
+					"parameterFilePath": "demo/activity-catalog-assets/parameters/parameterFile1.ffpt",
+					"parametersList": [
+						{
+							"name": "parameterFile1",
+							"value": "testValue1",
+							"type": "TEXT"
+						}
+					],
+					"requirements": []
+				},
+				{
+					"testPath": "main/_runlists/RunlistParamFile.vrl",
+					"allowToRunWithOptions":true,
+					"parameterFilePath": "demo/activity-catalog-assets/parameters/parameterFile1.ffpt"
+				},
+				{
+					"name": "TestNameForTags",
+					"tags": ["tag_1","tag_2","tag_3","headline","parameters","fun_times"],
+					"parametersList": [
+						{
+							"name": "parameterFile1",
+							"value": "valueFromManifestOverwrite",
+							"type": "TEXT"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "demo-Test Topology 2",
+			"actionTitle": "Reserve",
+			"description": "Topology reservation with Startup/Teardown",
+			"reservationDuration": "5",
+			"intervalToRunEndTestCase": "60",
+			"startupTasks": [
+				{
+					"testPath": "demo/activity-catalog-assets/test_cases/mixedParams.fftc",
+					"name": "ManifestNameForParamTestCase",
+					"parametersList": [
+						{
+							"name": "manifestParam1",
+							"value": "testValue1",
+							"type": "TEXT"
+						}
+					]
+				},
+				{
+					"name": "Manifest Defined Name",
+					"testPath": "demo/activity-catalog-assets/test_cases/sleep_30s.fftc",
+					"parametersList": [],
+					"requirements": []
+				},
+				{
+					"testPath": "demo/activity-catalog-assets/test_cases/headline1.fftc",
+					"allowToRunWithOptions":true,
+					"name": "ManifestNameForHeadline1"
+				},
+				{
+					"testPath": "demo/activity-catalog-assets/test_cases/defaultParams.fftc",
+					"name": "ManifestNameForParamTestCase"
+				},
+				{
+					"testPath": "demo/activity-catalog-assets/test_cases/manifestParams.fftc",
+					"name": "ManifestNameForParamTestCase",
+					"parametersList": [
+						{
+							"name": "manifestParam1",
+							"value": "testValue1",
+							"type": "TEXT"
+						},
+						{
+							"name": "manifestParam2",
+							"value": "testValue2",
+							"type": "TEXT"
+						}
+					]
+				}
+				
+			],
+			"teardownTasks": [
+				{
+					"name": "Manifest Defined Name",
+					"testPath": "demo/activity-catalog-assets/test_cases/sleep_30s.fftc",
+					"parametersList": [],
+					"requirements": []
+				},
+				{
+					"testPath": "demo/activity-catalog-assets/test_cases/headline2.fftc",
+					"allowToRunWithOptions":true,
+					"description": "Manifest Description for Headline 2"
+				},
+				{
+					"testPath": "demo/activity-catalog-assets/test_cases/manifestParams.fftc",
+					"name": "ManifestNameForParamTestCase",
+					"parametersList": [
+						{
+							"name": "manifestParam1",
+							"value": "testValue1",
+							"type": "TEXT"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "demo-Test Topology 3",
+			"actionTitle": "Reserve",
+			"description": "Topology reservation 3",
+			"reservationDuration": "30",
+			"automation": [
+				{
+					"testPath": "demo/activity-catalog-assets/test_cases/defaultParams.fftc",
+					"allowToRunWithOptions":true,
+					"name": "ManifestNameForParamTestCase"
+				},
+				{
+					"testPath": "main/_runlists/DefaultParamRunlist.vrl",
+					"allowToRunWithOptions":true
+				},
+				{
+					"testPath": "demo/activity-catalog-assets/test_cases/manifestParams.fftc",
+					"allowToRunWithOptions":true,
+					"parametersList": [
+						{
+							"name": "manifestParam1",
+							"value": "testValue1",
+							"type": "TEXT",
+							"description": "Test Description"
+						},
+						{
+							"name": "manifestParam2",
+							"value": "testValue2",
+							"type": "TEXT"
+						}
+					]
+				},
+				{
+					"testPath": "main/_runlists/ManifestParamRunlist.vrl",
+					"allowToRunWithOptions":true,
+					"parametersList": [
+						{
+							"name": "manifestParam1",
+							"value": "testValue1",
+							"type": "TEXT",
+							"description": "TestDescription"
+						},
+						{
+							"name": "manifestParam2",
+							"value": "testValue2",
+							"type": "TEXT"
+						}
+					]
+				},
+				{
+					"testPath": "demo/activity-catalog-assets/test_cases/mixedParams.fftc",
+					"allowToRunWithOptions":true,
+					"parametersList": [
+						{
+							"name": "manifestParam1",
+							"value": "testValue1",
+							"type": "TEXT",
+							"description": "Test Description"
+						}
+					]
+				},
+				{
+					"testPath": "main/_runlists/MixedParams.vrl",
+					"allowToRunWithOptions":true,
+					"parametersList": [
+						{
+							"name": "manifestParam1",
+							"value": "testValue1",
+							"type": "TEXT",
+							"description": "TestDescription"
+						}
+					]
+				},
+				{
+					"testPath": "demo/activity-catalog-assets/test_cases/overwriteParams.fftc",
+					"allowToRunWithOptions":true,
+					"parametersList": [
+						{
+							"name": "defaultParam1",
+							"value": "testManifestValue1",
+							"type": "TEXT",
+							"description": "Test Description 1"
+						},
+						{
+							"name": "defaultParam2",
+							"value": "testManifestValue2",
+							"type": "TEXT",
+							"description": "Test Description 2"
+						}
+					]
+				}
+			]
+		}
+	]
+}
