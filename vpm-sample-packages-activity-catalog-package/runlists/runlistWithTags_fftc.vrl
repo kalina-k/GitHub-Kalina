@@ -15,9 +15,7 @@
       
     ],
     "requirements": [
-      {
-	"pool":"driver"
-      },
+      
     ],
     "tags": [
       "tag_1","tag_2","good_times"
