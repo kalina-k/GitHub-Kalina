@@ -17,6 +17,10 @@
     "requirements": [
       
     ],
+    "tags": [
+      "tag_1","tag_2","tag_3"
+    ]
+    ,
     "reservationId": null,
     "topologyId": null,
     "topologyPath": null,
