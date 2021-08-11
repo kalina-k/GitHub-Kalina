@@ -16,8 +16,7 @@
     ],
     "requirements": [
       {
-	"name": "pool",
-	"value": "driver"
+	"pool":"driver"
       },
     ],
     "tags": [
