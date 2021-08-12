@@ -1,12 +1,12 @@
 {
-	"name": "Good Times", 
-        "priority": 100,
+	"name": "Good Times are Here",
+        "priority": 200,
 	"shortDescription": "Demo Activity with Automation configured for good times",
 	"icon": "customActivityManual.svg",
 	"descriptionMarkdown": "customActivityManual.md",
 	"topology": [
 		{
-			"name": "Test Topology 1",
+			"name": "demo-Test Topology 1",
 			"actionTitle": "Reserve",
 			"description": "Topology reservation",
 			"reservationDuration": "40",
