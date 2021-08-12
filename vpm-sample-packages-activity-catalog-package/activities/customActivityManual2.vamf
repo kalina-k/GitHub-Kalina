@@ -1,7 +1,7 @@
 {
-	"name": "Activity Demo 2",
+	"name": "Activity Demo",
         "priority": 400,
-	"shortDescription": "Demo Activity with Automation configured 2",
+	"shortDescription": "Demo Activity with Automation configured and weight 400",
 	"icon": "customActivityManual.svg",
 	"descriptionMarkdown": "customActivityManual.md",
 	"topology": [
