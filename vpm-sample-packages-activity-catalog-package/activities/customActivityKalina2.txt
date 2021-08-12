@@ -1,0 +1,130 @@
+{
+	"name": "Activity Demo",
+        "priority": 300,
+	"shortDescription": "Demo Activity with Automation configured. Should show third in the Activities list",
+	"icon": "customActivityManual.svg",
+	"descriptionMarkdown": "customActivityManual.md",
+	"topology": [
+		{
+			"name": "Test Topology 1",
+			"addRepositoryNamePrefix": true,
+			"actionTitle": "Reserve",
+			"description": "Topology with static defined automation assets only",
+			"reservationDuration": "60",
+			"automation": [
+				{
+					"testPath": "activity-catalog-assets/test_cases/headline1.fftc",
+					"addRepositoryNamePrefix": true,
+					"description": "Run with Options is enabled",
+					"allowToRunWithOptions": true
+				},
+				{
+					"testPath": "activity-catalog-assets/test_cases/headline2.fftc",
+					"addRepositoryNamePrefix": true,
+					"description": "Run with Options is disabled",
+					"allowToRunWithOptions": false
+				},
+				{
+					"testPath": "activity-catalog-assets/test_cases/nothing.fftc",
+					"addRepositoryNamePrefix": true,
+					"description": "Test Case with no name and no headline",
+					"allowToRunWithOptions": true
+				},
+				{
+					"testPath": "activity-catalog-assets/test_cases/fail.fftc",
+					"addRepositoryNamePrefix": true,
+					"description": "Test Case that will fail",
+					"allowToRunWithOptions": true
+				}
+			]
+		},
+		{
+			"name": "Test Topology 2",
+			"addRepositoryNamePrefix": true,
+			"actionTitle": "Reserve",
+			"description": "Topology reservation with Startup/Teardown",
+			"reservationDuration": "5",
+			"intervalToRunEndTestCase": "60",
+			"startupTasks": [
+				{
+					"testPath": "activity-catalog-assets/test_cases/nothing.fftc",
+					"addRepositoryNamePrefix": true,
+					"name": "Name Defined In Manifest For Startup"
+				},
+				{
+					"testPath": "activity-catalog-assets/test_cases/headline1.fftc",
+					"addRepositoryNamePrefix": true,
+					"parametersList": [
+						{
+							"name": "manifestParam1",
+							"value": "testValue1",
+							"type": "TEXT",
+							"description": "Test Description"
+						}
+					],
+					"requirements": []
+				}
+			],
+			"teardownTasks": [
+				{
+					"testPath": "activity-catalog-assets/test_cases/nothing.fftc",
+					"addRepositoryNamePrefix": true,
+					"name": "Name Defined In Manifest For Teardown"
+				},
+				{
+					"testPath": "activity-catalog-assets/test_cases/headline2.fftc",
+					"addRepositoryNamePrefix": true,
+					"parametersList": [],
+					"requirements": []
+				}
+			]
+		},
+		{
+			"name": "Test Topology 3",
+			"addRepositoryNamePrefix": true,
+			"actionTitle": "Reserve",
+			"description": "Topology reservation with mixed automation",
+			"reservationDuration": "60",
+			"automation": [
+				{
+					"tags": ["tag_1","tag_2","tag_3"]
+				},
+				{
+					"testPath": "activity-catalog-assets/test_cases/headline1.fftc",
+					"addRepositoryNamePrefix": true,
+					"description": "Run with Options is enabled",
+					"allowToRunWithOptions": true
+				},
+				{
+					"testPath": "activity-catalog-assets/test_cases/headline2.fftc",
+					"addRepositoryNamePrefix": true,
+					"description": "Run with Options is disabled",
+					"allowToRunWithOptions": false
+				},
+				{
+					"testPath": "activity-catalog-assets/test_cases/mixedParams.fftc",
+					"addRepositoryNamePrefix": true,
+					"name": "Manifest Name for Test Case",
+					"description": "Parameters defined both in test case and in manifest",
+					"allowToRunWithOptions": false,
+					"parametersList": [
+						{
+							"name": "manifestParam1",
+							"value": "testValue1",
+							"type": "TEXT",
+							"description": "Test Description"
+						}
+					]
+				},
+				{
+					"testPath": "activity-catalog-assets/test_cases/defaultParams.fftc",
+					"addRepositoryNamePrefix": true,
+					"name": "Test Case with Default Parameters",
+					"description": "Parameters defined in test case",
+					"allowToRunWithOptions": true
+				}
+			]
+		}
+	]
+}
+
