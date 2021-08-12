@@ -1,5 +1,6 @@
 {
 	"name": "Activity Demo",
+        "priority": 100,
 	"shortDescription": "Demo Activity with Automation configured",
 	"icon": "customActivityManual.svg",
 	"descriptionMarkdown": "customActivityManual.md",
@@ -128,7 +129,8 @@
 }
 
 {
-	"name": "Good Times",
+	"name": "Good Times are Here",
+        "priority": 200,
 	"shortDescription": "Demo Activity with Automation configured for good times",
 	"icon": "customActivityManual.svg",
 	"descriptionMarkdown": "customActivityManual.md",
