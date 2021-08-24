@@ -72,65 +72,6 @@
 					]
 				}
 			]
-		},
-		{
-			"name": "demo-Test Topology 3",
-			"actionTitle": "Reserve",
-			"description": "Topology reservation 3",
-			"reservationDuration": "30",
-			"automation": [
-				{
-					"testPath": "demo/activity-catalog-assets/test_cases/defaultParams.fftc",
-					"allowToRunWithOptions":true,
-					"name": "ManifestNameForParamTestCase"
-				},
-				{
-					"testPath": "demo/activity-catalog-assets/test_cases/manifestParams.fftc",
-					"allowToRunWithOptions":true,
-					"parametersList": [
-						{
-							"name": "manifestParam1",
-							"value": "testValue1",
-							"type": "TEXT",
-							"description": "Test Description"
-						},
-						{
-							"name": "manifestParam2",
-							"value": "testValue2",
-							"type": "TEXT"
-						}
-					]
-				},
-				{
-					"testPath": "main/_runlists/ManifestParamRunlist.vrl",
-					"allowToRunWithOptions":true,
-					"parametersList": [
-						{
-							"name": "manifestParam1",
-							"value": "testValue1",
-							"type": "TEXT",
-							"description": "TestDescription"
-						},
-						{
-							"name": "manifestParam2",
-							"value": "testValue2",
-							"type": "TEXT"
-						}
-					]
-				},
-				{
-					"testPath": "demo/activity-catalog-assets/test_cases/mixedParams.fftc",
-					"allowToRunWithOptions":true,
-					"parametersList": [
-						{
-							"name": "manifestParam1",
-							"value": "testValue1",
-							"type": "TEXT",
-							"description": "Test Description"
-						}
-					]
-				} 
-			]
 		}
 	]
 }
